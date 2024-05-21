@@ -27,7 +27,7 @@ function Ideas() {
         <div className="w-[800px]  mr-4">
           <div
             className={`bg-white p-6 shadow-md rounded-lg cursor-pointer hover:bg-gray-200 transition-shadow duration-300 ${
-              selectedCard === "ICP" ? "border-blue-500 border-4 bg-blue-100" : ""
+              selectedCard === "ICP" ? "border-blue-500 border-4 bg-blue-200" : ""
             }`}
             onClick={() => handleCardClick("ICP")}
           >
@@ -40,7 +40,7 @@ function Ideas() {
           <div className="my-4" />
           <div
             className={`bg-white p-6 shadow-md rounded-lg cursor-pointer hover:bg-gray-200 transition-shadow duration-300 ${
-              selectedCard === "campaign" ? "border-blue-500 border-4 bg-blue-100" : ""
+              selectedCard === "campaign" ? "border-blue-500 border-4 bg-blue-200" : ""
             }`}
             onClick={() => handleCardClick("campaign")}
           >
@@ -55,7 +55,7 @@ function Ideas() {
           <div className="my-4" />
           <div
             className={`bg-white p-6 shadow-md rounded-lg cursor-pointer hover:bg-gray-200 transition-shadow duration-300 ${
-              selectedCard === "content" ? "border-blue-500 border-4 bg-blue-100" : ""
+              selectedCard === "content" ? "border-blue-500 border-4 bg-blue-200" : ""
             }`}
             onClick={() => handleCardClick("content")}
           >
@@ -70,7 +70,7 @@ function Ideas() {
           <div className="my-4" />
           <div
             className={`bg-white p-6 shadow-md rounded-lg cursor-pointer hover:bg-gray-200 transition-shadow duration-300 ${
-              selectedCard === "leads" ? "border-blue-500 border-4 bg-blue-100" : ""
+              selectedCard === "leads" ? "border-blue-500 border-4 bg-blue-200" : ""
             }`}
             onClick={() => handleCardClick("leads")}
           >
