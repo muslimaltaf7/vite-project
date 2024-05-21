@@ -3,3 +3,15 @@
 @tailwind utilities;
 
 
+.slick-dots-custom li button {
+  width: 2rem;
+  height: 2rem;
+}
+
+.slick-dots-custom .slick-active button {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #0066ff;
+}
+
+  
