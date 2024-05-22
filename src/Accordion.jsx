@@ -25,8 +25,8 @@ const AccordionItem = ({ title, content }) => {
 
 const Accordion = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen ">
-      <div className="w-full bg-[#F8F8F8] flex justify-center">
+    <div className="flex justify-center items-center my-28 ">
+      <div className="w-full bg-[#F8F8F8] flex justify-center py-8">
         <div className="w-full max-w-4xl p-4 mb-4" style={{ paddingTop: 'var(--wp--preset--spacing--70)', paddingBottom: 'var(--wp--preset--spacing--70)' }}>
           <h2 className="text-center text-3xl font-semibold text-[34px] text-[#05195F] my-8 font-poppins tracking-wide">Content Syndication FAQ</h2>
           <AccordionItem

@@ -8,7 +8,7 @@ function Ideas() {
   };
 
   return (
-    <div className="py-8">
+    <div className="py-8 mx-[20%]">
       <h2 className="text-center text-4xl font-bold mb-8">
         Fill the funnel with your ideal buyers.
       </h2>
@@ -82,7 +82,7 @@ function Ideas() {
           </div>
         </div>
         <div className="w-2/3">
-          <div className="bg-white p-6 shadow-md rounded-lg">
+          <div className="bg-white p-6  rounded-lg">
             {selectedCard && (
               <>
                 <div className="flex justify-between items-center">
