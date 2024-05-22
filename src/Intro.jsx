@@ -1,7 +1,7 @@
 function Intro() {
   return (
     <>
-      <div className="p-0 container mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center gap-4 mt-24">
+      <div className="p container mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center gap-4 ">
         <div className="flex justify-center md:justify-end container mx-auto">
           <img
             src="\images\all-the-support-you-need.svg"
