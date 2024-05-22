@@ -8,6 +8,7 @@ import CarouselComponent from './CarouselComponent'
 import Intro from './Intro'
 import Ideas from './Ideas'
 import Footer from './Footer';
+import React from 'react';
 
 
 const App = () => {
