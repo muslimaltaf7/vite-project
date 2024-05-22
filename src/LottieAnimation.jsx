@@ -33,7 +33,7 @@ function LottieAnimation() {
         <Lottie 
           options={defaultOptions}
           height={400}
-          width={400} 
+          width={500} 
         />
       ) : (
         <p>Loading animation...</p>
