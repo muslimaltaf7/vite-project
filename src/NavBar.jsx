@@ -32,7 +32,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="p-4 mt -m-7 mt-3">
+    <nav className="p-4  mt-3">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-2xl">
           <a href="/"><img src="https://demandscience.com/wp-content/uploads/2023/02/demand-science-logo-2.svg" alt="" /></a>
