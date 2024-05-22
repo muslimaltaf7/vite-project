@@ -5,7 +5,7 @@ function Intro () {
   <div className="justify-end  sm:block container mx-auto grid grid-cols-1">
     <img
       src="\public\images\all-the-support-you-need.svg"
-      className="w-[650px] h-[550px]"
+      className="w-[650px] h-[450px]"
       alt="img"
     />
   </div>
@@ -22,17 +22,17 @@ function Intro () {
     <div className="flex flex-row flex-wrap justify-start container mx-auto">
       <img
         src="\public\images\leadcapture_momentumleader_leader.svg"
-        className="w-40 h-40"
+        className="w-40 h-45 mr-4"
         alt=""
       />
       <img
         src="\public\images\account-basedadvertising_easiesttodobusinesswith_enterprise_easeofdoingbusinesswith.svg"
-        className="w-40 h-40"
+        className="w-40 h-45 mr-4"
         alt=""
       />
       <img
         src="\public\images\leadintelligence_bestestimatedroi_small-business_roi.svg"
-        className="w-40 h-40"
+        className="w-40 h-45"
         alt=""
       />
     </div>
