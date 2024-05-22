@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex flex-1 flex-col space-x-10 flex-wrap md:flex-row w-full lg:flex-row sm:flex-row bg-cover min-h-[907.88px] bg-no-repeat bg-center  bg-[url('images/footer-bg.webp')] py-24 px-20 text-white">
+    <div className="flex flex-1 flex-col sm:space-x-10 flex-wrap md:flex-row w-full lg:flex-row sm:flex-row bg-cover min-h-[907.88px] bg-no-repeat bg-center  bg-[url('images/footer-bg.webp')] py-24 px-10 text-white">
       <div className="flex flex-col mb-8 md:mb-0 md:mr-8">
         <img
           src="https://demandscience.com/wp-content/uploads/2023/02/demand-science-logo-white-1.svg"

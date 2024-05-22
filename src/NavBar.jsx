@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import dropdownIcon from "./assets/icons8-dropdown-50.png";
 import searchIcon from "./assets/icons8-search-32.png";
+import { FaBars } from "react-icons/fa";
 
 const NavBar = () => {
   const [dropdowns, setDropdowns] = useState({
@@ -33,8 +34,8 @@ const NavBar = () => {
 
   return (
     <nav className="p-4  mt-3">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-2xl">
+      <div className="container mx-auto flex justify-between gap-4 items-center">
+        <div className="text-white text-2xl flex-1">
           <a href="/">
             <img
               src="https://demandscience.com/wp-content/uploads/2023/02/demand-science-logo-2.svg"
@@ -42,7 +43,7 @@ const NavBar = () => {
             />
           </a>
         </div>
-        <div className="sm:flex hidden justify-center flex-grow gap-6">
+        <div className="lg:flex hidden justify-center flex-grow gap-6">
           <div
             onMouseEnter={() => clearTimeout(closeTimeout)}
             onMouseLeave={() => closeDropdowns()}
@@ -230,11 +231,13 @@ const NavBar = () => {
           </div>
         </div>
         {/* Let's Talk Button */}
-        <button className="bg-white hover:bg-[#CC0047] hover:text-white text-[#CC0047] text-lg  py-[4px] px-6 rounded-full focus:outline-none mr-4 border border-[#CC0047]">
+        <button className="bg-white hidden lg:block hover:bg-[#CC0047] hover:text-white text-[#CC0047] text-lg  py-[4px] px-6 rounded-full focus:outline-none mr-4 border border-[#CC0047]">
           Let&apos;s Talk
         </button>
         {/* Search Icon */}
         <img src={searchIcon} alt="search icon" className="h-7 w-7" />
+        
+        <FaBars className="block lg:hidden text-2xl " />
       </div>
     </nav>
   );
