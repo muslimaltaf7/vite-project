@@ -8,7 +8,7 @@ function Ideas() {
   };
 
   return (
-    <div className="py-8 mx-[20%]">
+    <div className="py-8 mx-[10%]">
       <h2 className="text-center text-4xl font-bold mb-8">
         Fill the funnel with your ideal buyers.
       </h2>
