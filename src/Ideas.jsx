@@ -8,7 +8,7 @@ function Ideas() {
   };
 
   return (
-    <div className="py-8 mx-[20%]">
+    <div className="py-8 sm:mx-[20%] mx-2">
       <h2 className="text-center text-4xl font-bold mb-8">
         Fill the funnel with your ideal buyers.
       </h2>
@@ -23,8 +23,8 @@ function Ideas() {
           Get Started
         </a>
       </div>
-      <div className="flex items-start justify-center">
-        <div className="w-[800px]  mr-4">
+      <div className="grid sm:grid-cols-5">
+        <div className="col-span-3  mr-4">
           <div
             className={`bg-white p-6 shadow-md rounded-lg cursor-pointer hover:bg-gray-200 transition-shadow duration-300 ${
               selectedCard === "ICP" ? "border-blue-500 border-4 bg-blue-200" : ""
@@ -81,7 +81,7 @@ function Ideas() {
             </p>
           </div>
         </div>
-        <div className="w-2/3">
+        <div className="col-span-2">
           <div className="bg-white p-6  rounded-lg">
             {selectedCard && (
               <>
