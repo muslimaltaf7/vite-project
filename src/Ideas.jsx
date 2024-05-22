@@ -23,11 +23,13 @@ function Ideas() {
           Get Started
         </a>
       </div>
-      <div className="flex items-start justify-center">
-        <div className="w-[800px]  mr-4">
+      <div className="flex items-start justify-center ml-[180px] mr-[80px]">
+        <div className="w-[800px] mr-4">
           <div
             className={`bg-white p-6 shadow-md rounded-lg cursor-pointer hover:bg-gray-200 transition-shadow duration-300 ${
-              selectedCard === "ICP" ? "border-blue-500 border-4 bg-blue-200" : ""
+              selectedCard === "ICP"
+                ? "border-blue-500 border-4 bg-blue-200"
+                : ""
             }`}
             onClick={() => handleCardClick("ICP")}
           >
@@ -40,7 +42,9 @@ function Ideas() {
           <div className="my-4" />
           <div
             className={`bg-white p-6 shadow-md rounded-lg cursor-pointer hover:bg-gray-200 transition-shadow duration-300 ${
-              selectedCard === "campaign" ? "border-blue-500 border-4 bg-blue-200" : ""
+              selectedCard === "campaign"
+                ? "border-blue-500 border-4 bg-blue-200"
+                : ""
             }`}
             onClick={() => handleCardClick("campaign")}
           >
@@ -55,7 +59,9 @@ function Ideas() {
           <div className="my-4" />
           <div
             className={`bg-white p-6 shadow-md rounded-lg cursor-pointer hover:bg-gray-200 transition-shadow duration-300 ${
-              selectedCard === "content" ? "border-blue-500 border-4 bg-blue-200" : ""
+              selectedCard === "content"
+                ? "border-blue-500 border-4 bg-blue-200"
+                : ""
             }`}
             onClick={() => handleCardClick("content")}
           >
@@ -70,7 +76,9 @@ function Ideas() {
           <div className="my-4" />
           <div
             className={`bg-white p-6 shadow-md rounded-lg cursor-pointer hover:bg-gray-200 transition-shadow duration-300 ${
-              selectedCard === "leads" ? "border-blue-500 border-4 bg-blue-200" : ""
+              selectedCard === "leads"
+                ? "border-blue-500 border-4 bg-blue-200"
+                : ""
             }`}
             onClick={() => handleCardClick("leads")}
           >
@@ -86,7 +94,7 @@ function Ideas() {
             {selectedCard && (
               <>
                 <div className="flex justify-between items-center">
-                  <div></div>
+                  {/* Arrow Icon */}
                   <svg
                     className="w-6 h-6 text-gray-500 transform rotate-90"
                     xmlns="http://www.w3.org/2000/svg"
@@ -168,11 +176,8 @@ function Ideas() {
                       <p className="text-xl pt-[58px] text-left text-gray-500 pb-2">
                         Our lead generation service provides you with
                         high-quality, targeted leads that are ready to convert.
-                        <p>
-                          We use advanced targeting techniques to identify and
-                          reach your ideal audience, ensuring maximum ROI for
-                          your campaigns.
-                        </p>
+                      </p>
+                      <p className="text-xl text-left text-gray-500 pb-2">
                         We use advanced targeting techniques to identify and
                         reach your ideal audience, ensuring maximum ROI for your
                         campaigns.
