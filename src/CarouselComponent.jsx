@@ -1,3 +1,7 @@
+
+
+
+
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -9,7 +13,7 @@ const CarouselComponent = () => {
     const CustomNextArrow = (props) => {
         const { onClick } = props;
         return (
-            <div 
+            <div
                 className="absolute top-1/2 transform -translate-y-1/2 right-[-30px] z-10 cursor-pointer"
                 onClick={onClick}
             >
@@ -23,7 +27,7 @@ const CarouselComponent = () => {
     const CustomPrevArrow = (props) => {
         const { onClick } = props;
         return (
-            <div 
+            <div
                 className="absolute top-1/2 transform -translate-y-1/2 left-[-30px] z-10 cursor-pointer"
                 onClick={onClick}
             >
@@ -42,6 +46,11 @@ const CarouselComponent = () => {
         slidesToScroll: 1,
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />,
+        appendDots: dots => (
+            <div className="bg-[#F8F8F8] py-4">
+                <ul className="slick-dots">{dots}</ul>
+            </div>
+        ),
         responsive: [
             {
                 breakpoint: 1024,
@@ -112,26 +121,33 @@ const CarouselComponent = () => {
     ];
 
     return (
-        <div className="w-4/5 mx-auto relative">
-            <h2 className="text-5xl font-bold text-center mb-6 mt-8" style={{ color: '#05195F' }}>Let’s make this your success story</h2>
-            <Slider {...settings}>
-                {slidesData.map((slide, index) => (
-                    <div key={index} className="p-2">
-                        <div className="relative rounded-lg overflow-hidden group m-4">
-                            <img
-                                className="w-full h-64 object-cover rounded-t-md transition-transform duration-300 transform group-hover:scale-105"
-                                src={slide.image}
-                                alt={slide.title}
-                            />
-                        </div>
-                        <div className="m-4 text-center">
-                            <h3 className="text-3xl font-bold whitespace-pre-line m-2" style={{ color: '#05195F' }}>{slide.title}</h3>
-                            <p className="text-xl whitespace-pre-line m-2">{slide.description}</p>
-                            <a className="text-red-600 hover:underline text-lg " href={slide.link}>Read More</a>
-                        </div>
+        <div className='w-full bg-[#F8F8F8] pt-4'>
+            <div className="w-4/5 mx-auto relative">
+                <h2 className="text-5xl font-bold text-center mb-6 mt-8" style={{ color: '#05195F' }}>Let’s make this your success story</h2>
+                <div className="bg-[#F8F8F8] relative"> {/* Apply background color to immediate parent of Slider */}
+                    <Slider {...settings}>
+                        {slidesData.map((slide, index) => (
+                            <div key={index} className="p-2">
+                                <div className="relative rounded-lg overflow-hidden group m-4 bg-[#F8F8F8]"> {/* Apply background color here */}
+                                    <img
+                                        className="w-full h-64 object-cover rounded-t-md transition-transform duration-300 transform group-hover:scale-105"
+                                        src={slide.image}
+                                        alt={slide.title}
+                                    />
+                                    <div className="m-4 text-center">
+                                        <h3 className="text-3xl font-bold whitespace-pre-line m-2" style={{ color: '#05195F' }}>{slide.title}</h3>
+                                        <p className="text-xl whitespace-pre-line m-2">{slide.description}</p>
+                                        <a className="text-red-600 hover:underline text-lg " href={slide.link}>Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </Slider>
+                    <div className="absolute bottom-0 left-0 right-0 bg-[#F8F8F8]">
+                        <ul className="slick-dots"></ul>
                     </div>
-                ))}
-            </Slider>
+                </div>
+            </div>
         </div>
     );
 };
