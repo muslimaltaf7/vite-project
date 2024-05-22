@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+.slick-dots-custom li button {
+  width: 2rem;
+  height: 2rem;
+}
+
+.slick-dots-custom .slick-active button {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #0066ff;
+}
+
+  
