@@ -9,6 +9,7 @@ import Intro from './Intro'
 import Ideas from './Ideas'
 import Footer from './Footer';
 
+
 const App = () => {
   return (
     <div>
