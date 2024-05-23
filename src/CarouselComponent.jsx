@@ -1,9 +1,4 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import "./index.css";
+
 
 import React from 'react';
 import Slider from 'react-slick';
@@ -72,71 +67,7 @@ const CarouselComponent = () => {
     ],
   };
 
-  const slidesData = [
-    {
-      image:
-        "https://demandscience.com/wp-content/uploads/2022/05/header-image_450x550_circleci-1.svg",
-      title: "PureSyndication and PureABM\naccelerate CircleCI sales cycle",
-      description: "Uncovering Leads Within a Niche\nDevOps World...",
-      link: "#",
-    },
-    {
-      image:
-        "https://demandscience.com/wp-content/uploads/2022/05/header-image_450x550_mx_cs-1.svg",
-      title: "MX Technologies PureABM\nCase Study",
-      description: "MX Partners with DemandScience\nto Generate Demand...",
-      link: "#",
-    },
-    {
-      image:
-        "https://demandscience.com/wp-content/uploads/2022/05/header-image_450x550-%E2%80%93-unbranded-puresyn-1.svg",
-      title: "Guaranteed Lead Volume\nwith PureSyndication",
-      description:
-        'Improve Lead Quality to Augment\nthe Marketing Pipeline to Reach\nRevenue Goals "DemandScience has made a',
-      link: "#",
-    },
-    {
-      image:
-        "https://demandscience.com/wp-content/uploads/2022/05/header-image_450x550_smg_cs-1.svg",
-      title: "Breaking into New Markets\nwith PureSyndication",
-      description:
-        'How SMG Broke into New Markets\nwith Content Syndication "Given our\nniche industry, it is not....',
-      link: "#",
-    },
-    {
-      image:
-        "https://demandscience.com/wp-content/uploads/2022/05/header-image_450x550_prolifiq-1.svg",
-      title: "Scalable Content Syndication\nfor Market Penetration",
-      description:
-        'Scalable Content Syndication\nfor A Digital-first Market Penetration\nInitiative "DemandScience helped us\naccelerate and grow by...',
-      link: "#",
-    },
-    {
-      image:
-        "https://demandscience.com/wp-content/uploads/2022/05/header-image_450x550-%E2%80%93-spanning-1.svg",
-      title: "Spanning PureSyndication\nwith Intent",
-      description:
-        'Spanning Launches Content\nSyndication with Intent and Doubles\nScale of Demand Generation\nProgram "DemandScience leads have...',
-      link: "#",
-    },
-    {
-      image:
-        "https://demandscience.com/wp-content/uploads/2023/02/quit-genius-cs.jpg",
-      title:
-        "How Quit Genius Generated\n$4 MIllion of Pipeline\nwith PureSyndication",
-      description:
-        "How Quit Genius Generated\n$4 Million of Pipeline with\nPureSyndication Quit Genius\nis the worlds first...",
-      link: "#",
-    },
-    {
-      image: "https://demandscience.com/wp-content/uploads/2023/02/mfg_cs.jpg",
-      title:
-        "How Media Futures Group\nUnlocked New Markets\nwith PureSyndication",
-      description:
-        'How Media Futures Group\nUnlocked New Markets with\nPureSyndication "DemandScience\nhas allowed us to expand our...',
-      link: "#",
-    },
-  ];
+  
     const slidesData = [
         {
                         image: 'https://demandscience.com/wp-content/uploads/2022/05/header-image_450x550_circleci-1.svg',
