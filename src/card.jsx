@@ -8,7 +8,7 @@ const Card = () => {
  
   return (
     <div className="flex flex-col justify-center items-center py-24">
-        <h1 className="text-4xl font-semi mb-11 text-center font-poppins" style={titleStyle}>
+        <h1 className="text-[36px] font-semibold mb-11 text-center font-poppins" style={titleStyle}>
           Campaigns that fill the entire funnel.
         </h1>
       <div className="w-full flex flex-col justify-center items-center bg-white rounded-lg p-4">
