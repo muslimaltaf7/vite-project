@@ -16,6 +16,7 @@ const CarouselComponent = () => {
             </div>
         );
     };
+    
 
     const CustomPrevArrow = (props) => {
         const { onClick } = props;
@@ -131,6 +132,7 @@ const CarouselComponent = () => {
                             </a>
                         </div>
                     </div>
+                    
                 ))}
             </Slider>
         </div>

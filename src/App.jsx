@@ -9,13 +9,13 @@ import PurePush from './Pure Push/PurePush';
 const App = () => {
   return (
     <div>
-      <NavBar />
+      
       <Routes>
-      <Route path="/" element={<PurePush/>} />
+      <Route path="/" element={<Home/>} />
         <Route path="contentSyndication" element={<ContentSyndication/>} />
         <Route path="purepush" element={<PurePush/>} />
       </Routes>
-      <Footer/>
+     
     </div>
   );
 };
