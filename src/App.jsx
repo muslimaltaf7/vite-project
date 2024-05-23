@@ -4,6 +4,8 @@ import ContentSyndication from './ContentSyndication';
 import Footer from './Footer'
 import { Routes, Route } from "react-router-dom";
 import PurePush from './Pure Push/PurePush';
+import ABM from './ABM';
+import Home from './Home'
 
 
 const App = () => {
