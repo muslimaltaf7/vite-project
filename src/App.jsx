@@ -4,18 +4,19 @@ import ContentSyndication from './ContentSyndication';
 import Footer from './Footer'
 import { Routes, Route } from "react-router-dom";
 import PurePush from './PurePush';
+import Home from './Home';
 
 
 const App = () => {
   return (
     <div>
-      <NavBar />
+      
       <Routes>
-      <Route path="/" element={<PurePush/>} />
+      <Route path="/" element={<Home/>} />
         <Route path="contentSyndication" element={<ContentSyndication/>} />
         <Route path="purepush" element={<PurePush/>} />
       </Routes>
-      <Footer/>
+     
     </div>
   );
 };
