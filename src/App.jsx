@@ -5,6 +5,8 @@ import Footer from './Footer'
 import { Routes, Route } from "react-router-dom";
 import PurePush from './PurePush';
 import Home from './Home';
+import ABM from './ABM';
+
 
 
 const App = () => {
@@ -15,6 +17,7 @@ const App = () => {
       <Route path="/" element={<Home/>} />
         <Route path="contentSyndication" element={<ContentSyndication/>} />
         <Route path="purepush" element={<PurePush/>} />
+        <Route path="ABM" element={<ABM />} />
       </Routes>
      
     </div>

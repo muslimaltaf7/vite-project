@@ -7,8 +7,10 @@ import MQL from "./MQL";
 import LiveDataFactory from "./FactoryFlow";
 import Testimonials from "./Testiomonials";
 import CampaignInfo from "./CampaignInfo";
+import NavBar from "./NavBar";
 
 function Home() {
+
   const messages = [
     "Unlock your B2B Success with science-based B2B marketing.",
     "Fuel your growth with data-driven, AI-powered B2B solutions.",
@@ -27,6 +29,8 @@ function Home() {
   });
 
   return (
+    <>
+<NavBar/>
     <div className="min-h-screen">
       <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]">
         <video
@@ -69,6 +73,7 @@ function Home() {
       <CampaignInfo />
       <Footer />
     </div>
+    </>
   );
 }
 export default Home;

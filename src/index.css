@@ -83,61 +83,13 @@
   color: #FFFFFF;
   font-size: 1.5rem;
 }
-/*
-.slick-dots {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex !important;
-  justify-content: center;
-  padding-bottom: 1px;
+.active-dot {
+  background-color: blue !important;
 }
 
-.slick-dots li {
-  margin: 0 5px;
+.inactive-dot {
+  background-color: gray !important; 
 }
-
-.slick-dots li button {
-  display: none; 
-} 
-
- .slick-dots li {
-  width: 10px;
-  height: 10px;
-  background-color: #A0AEC0;
-  border-radius: 50%;
-} 
-
- .slick-dots li.slick-active {
-  width: 20px;
-  height: 10px;
-  background-color: #3182CE;
-  border-radius: 5px;
-}   */
-/* Remove the styling for button and directly style the dots */
-/* .slick-dots li button {
-   width: 10px;
-  height: 10px;
-  background-color: #A0AEC0;
-  border-radius: 50%;
-  border: none; 
-}
-
-.slick-dots li {
-  margin: 0 5px; 
-}
-
-.slick-dots li.slick-active button {
-  background-color: #3182CE; 
-}
-
-
-.custom-dots {
-  position: relative;
-  bottom: -20px;
-} */
-
 
 
 

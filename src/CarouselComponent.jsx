@@ -48,10 +48,12 @@ const CarouselComponent = () => {
             </ul >
         </div >
         ),
-        customPaging: (i) => (
-            <div className=" slick-dots h-3 w-3 bg-gray-400 rounded-full"></div> // Custom dot styling
-            
-    ),
+    //     customPaging: (i,) => (
+    //         <div className=" slick-dots h-3 w-3 bg-gray-400 rounded-full"></div> // Custom dot styling
+    // ),
+    
+
+   
 
 
 responsive: [
