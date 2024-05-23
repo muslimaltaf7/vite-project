@@ -16,6 +16,7 @@ const CarouselComponent = () => {
             </div>
         );
     };
+    
 
     const CustomPrevArrow = (props) => {
         const { onClick } = props;

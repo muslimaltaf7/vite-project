@@ -1,41 +1,22 @@
 import React from 'react';
-import Accordion from './Accordion';
-import Tools from './Tools'
-import Hero from './Hero';
 import NavBar from './NavBar'
-import Card from './card'
-import CarouselComponent from './CarouselComponent'
-import Intro from './Intro'
-import Ideas from './Ideas'
-import Footer from './Footer';
-import ABMHero from './ABMhero';
-import ABMCard from './ABMcard';
-import ABMAccordion from './ABMAccordion';
-import ABMStrategy from './ABMStrategy';
-import ABMTitle from './ABMTitle';
-import ABMIntro from './ABMIntro';
+import ContentSyndication from './ContentSyndication';
+import Footer from './Footer'
+import { Routes, Route } from "react-router-dom";
+import PurePush from './PurePush';
+import Home from './Home';
+
 
 const App = () => {
   return (
     <div>
-      <NavBar />
-      <Hero/>
-      <Card />
-      <Ideas />
-      <CarouselComponent/>
-      <Intro />
-      <Accordion />
-      <Tools />
-      <Footer/>
-      <ABMHero />
-      <ABMCard />
-      <ABMTitle />
-      <ABMIntro />
-      <ABMStrategy />
-      <ABMAccordion />
-      <Footer />
       
-      
+      <Routes>
+      <Route path="/" element={<Home/>} />
+        <Route path="contentSyndication" element={<ContentSyndication/>} />
+        <Route path="purepush" element={<PurePush/>} />
+      </Routes>
+     
     </div>
   );
 };
