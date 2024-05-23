@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 import ContentSyndication from './ContentSyndication';
 import Footer from './Footer'
 import { Routes, Route } from "react-router-dom";
-import PurePush from './PurePush';
+import PurePush from './Pure Push/PurePush';
 
 
 const App = () => {
