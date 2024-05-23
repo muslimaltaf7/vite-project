@@ -1,6 +1,5 @@
 
-
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -84,7 +83,7 @@
   color: #FFFFFF;
   font-size: 1.5rem;
 }
-
+/*
 .slick-dots {
   position: absolute;
   bottom: 0;
@@ -100,24 +99,53 @@
 }
 
 .slick-dots li button {
-  display: none; /* Hide the default button */
-}
+  display: none; 
+} 
 
-.slick-dots li {
+ .slick-dots li {
   width: 10px;
   height: 10px;
   background-color: #A0AEC0;
   border-radius: 50%;
-}
+} 
 
-.slick-dots li.slick-active {
+ .slick-dots li.slick-active {
   width: 20px;
   height: 10px;
   background-color: #3182CE;
   border-radius: 5px;
+}   */
+/* Remove the styling for button and directly style the dots */
+/* .slick-dots li button {
+   width: 10px;
+  height: 10px;
+  background-color: #A0AEC0;
+  border-radius: 50%;
+  border: none; 
 }
+
+.slick-dots li {
+  margin: 0 5px; 
+}
+
+.slick-dots li.slick-active button {
+  background-color: #3182CE; 
+}
+
 
 .custom-dots {
   position: relative;
   bottom: -20px;
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
