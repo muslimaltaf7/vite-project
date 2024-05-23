@@ -3,7 +3,7 @@ import LottieAnimation from "./LottieAnimation";
 
 const Hero = () => {
   return (
-    <div className="grid lg:grid-cols-2 md:grid-cols-2 w-[75%] mx-auto font-poppins">
+    <div className="grid lg:grid-cols-2 md:grid-cols-2 w-[75%] mx-auto font-poppins py-10">
       <div className=" md:text-left flex flex-col gap-4 col-span-1">
         <h4 className="text-[#0066FC] text-2xl md:text-2xl font-poppins ">
           <strong>Content Syndication</strong>

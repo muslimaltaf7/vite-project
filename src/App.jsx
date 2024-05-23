@@ -1,26 +1,20 @@
 import React from 'react';
-import Accordion from './Accordion';
-import Tools from './Tools'
-import Hero from './Hero';
 import NavBar from './NavBar'
-import Card from './card'
-import CarouselComponent from './CarouselComponent'
-import Intro from './Intro'
-import Ideas from './Ideas'
-import Footer from './Footer';
+import ContentSyndication from './ContentSyndication';
+import Footer from './Footer'
+import { Routes, Route } from "react-router-dom";
+import PurePush from './PurePush';
 
 
 const App = () => {
   return (
     <div>
       <NavBar />
-      <Hero/>
-      < Card />
-      < Ideas />
-      < CarouselComponent/>
-      <Intro />
-      <Accordion />
-      <Tools />
+      <Routes>
+      <Route path="/" element={<PurePush/>} />
+        <Route path="contentSyndication" element={<ContentSyndication/>} />
+        <Route path="purepush" element={<PurePush/>} />
+      </Routes>
       <Footer/>
     </div>
   );

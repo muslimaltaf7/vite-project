@@ -34,7 +34,7 @@ const NavBar = () => {
 
   return (
     <nav className="p-4  mt-3">
-      <div className="container mx-auto flex justify-between gap-4 items-center">
+      <div className="container px-12 mx-auto flex justify-around gap-4 items-center">
         <div className="text-white text-2xl flex-1">
           <a href="/">
             <img
@@ -44,6 +44,18 @@ const NavBar = () => {
           </a>
         </div>
         <div className="lg:flex hidden justify-center flex-grow gap-6">
+          <div
+            onMouseEnter={() => clearTimeout(closeTimeout)}
+            onMouseLeave={() => closeDropdowns()}
+            className="relative ml-4"
+          >
+            <a
+              href="/"
+              className="text-lg focus:outline-none flex items-center font-medium"
+            >
+              Home
+            </a>
+          </div>
           <div
             onMouseEnter={() => clearTimeout(closeTimeout)}
             onMouseLeave={() => closeDropdowns()}
@@ -67,22 +79,22 @@ const NavBar = () => {
                 onMouseLeave={() => closeDropdowns()}
               >
                 <a
-                  href="#"
+                  href="/contentsyndication"
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                 >
-                  Product 1
+                  Content Syndication
+                </a>
+                <a
+                  href="/purepush"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Pure Push
                 </a>
                 <a
                   href="#"
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                 >
-                  Product 2
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  Product 3
+                  ABM Display
                 </a>
                 <a
                   href="#"
@@ -139,95 +151,11 @@ const NavBar = () => {
               </div>
             )}
           </div>
+
           <div className="relative ml-4">
-            <button
-              onClick={() => toggleDropdown("resources")}
-              className="text-lg focus:outline-none flex items-center font-medium"
-            >
-              Resources{" "}
-              <img
-                src={dropdownIcon}
-                alt="dropdown icon"
-                className="ml-1 h-4 w-4"
-              />
-            </button>
-            {dropdowns.resources && (
-              <div
-                className="absolute bg-white mt-2 py-2 w-48 rounded-lg shadow-lg"
-                onMouseEnter={() => clearTimeout(closeTimeout)}
-                onMouseLeave={() => closeDropdowns()}
-              >
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  Resource 1
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  Resource 2
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  Resource 3
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  Resource 4
-                </a>
-              </div>
-            )}
-          </div>
-          <div className="relative ml-4">
-            <button
-              onClick={() => toggleDropdown("aboutUs")}
-              className="text-lg focus:outline-none flex items-center font-medium"
-            >
+            <button className="text-lg focus:outline-none flex items-center font-medium">
               About Us{" "}
-              <img
-                src={dropdownIcon}
-                alt="dropdown icon"
-                className="ml-1 h-4 w-4"
-              />
             </button>
-            {dropdowns.aboutUs && (
-              <div
-                className="absolute bg-white mt-2 py-2 w-48 rounded-lg shadow-lg"
-                onMouseEnter={() => clearTimeout(closeTimeout)}
-                onMouseLeave={() => closeDropdowns()}
-              >
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  About Us 1
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  About Us 2
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  About Us 3
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  About Us 4
-                </a>
-              </div>
-            )}
           </div>
         </div>
         {/* Let's Talk Button */}
@@ -235,8 +163,7 @@ const NavBar = () => {
           Let&apos;s Talk
         </button>
         {/* Search Icon */}
-        <img src={searchIcon} alt="search icon" className="h-7 w-7" />
-        
+
         <FaBars className="block lg:hidden text-2xl " />
       </div>
     </nav>
