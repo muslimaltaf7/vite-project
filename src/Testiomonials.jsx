@@ -13,8 +13,8 @@ const Testimonials = () => {
     };
 
     return (
-        <div className="grid grid-cols-2 md:grid-cols-2 p-4  md:p-10 justify-items-center py-12 w-[70%] mx-auto gap-36">
-            <div className="flex flex-col items-center md:items-start gap-4">
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-6 justify-items-center py-12 w-[70%] mx-auto ">
+            <div className="flex flex-col items-center px-8 md:items-start gap-4 w-full">
                 <div className="grid grid-cols-3 justify-center items-center mb-6  gap-4">
                     <img src="https://demandscience.com/wp-content/uploads/2024/04/leadcapture_momentumleader_leader.svg" alt="" className="w-24 h-24 md:w-48 md:h-48" />
                     <img src="https://demandscience.com/wp-content/uploads/2024/04/account-basedadvertising_easiesttodobusinesswith_enterprise_easeofdoingbusinesswith.svg" alt="" className="w-24 h-24 md:w-48 md:h-48 mx-2" />
@@ -34,7 +34,7 @@ const Testimonials = () => {
                 </div>
             </div>
 
-            <div className="bg-blue-700 rounded-lg shadow-lg w-full md:w-[600px] p-6 md:p-10">
+            <div className="bg-blue-700  shadow-lg px-8 w-full py-10">
                 <img src="https://demandscience.com/wp-content/uploads/2023/02/vector-529-1.svg" alt="" className="w-16 md:w-24 mb-4 mx-auto" />
                 <div className="bg-blue-700 rounded-lg shadow-lg p-6 md:p-10 flex flex-col items-center justify-center">
                     <Slider {...settings} className="w-full">
