@@ -33,7 +33,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="p-4  mt-3">
+    <nav className="p-4 z-20 sticky mt-3">
       <div className="container px-12 mx-auto flex justify-around gap-4 items-center">
         <div className="text-white text-2xl flex-1">
           <a href="/">
@@ -91,7 +91,7 @@ const NavBar = () => {
                   Pure Push
                 </a>
                 <a
-                  href="#"
+                  href="abmpage"
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                 >
                   ABM Display

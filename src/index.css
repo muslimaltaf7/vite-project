@@ -83,60 +83,43 @@
   color: #FFFFFF;
   font-size: 1.5rem;
 }
-/*
+.active-dot {
+  background-color: blue !important;
+}
+
+.inactive-dot {
+  background-color: gray !important; 
+}
+
+
 .slick-dots {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex !important;
   justify-content: center;
-  padding-bottom: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .slick-dots li {
-  margin: 0 5px;
-}
-
-.slick-dots li button {
-  display: none; 
-} 
-
- .slick-dots li {
-  width: 10px;
-  height: 10px;
-  background-color: #A0AEC0;
-  border-radius: 50%;
-} 
-
- .slick-dots li.slick-active {
-  width: 20px;
-  height: 10px;
-  background-color: #3182CE;
-  border-radius: 5px;
-}   */
-/* Remove the styling for button and directly style the dots */
-/* .slick-dots li button {
-   width: 10px;
-  height: 10px;
-  background-color: #A0AEC0;
-  border-radius: 50%;
-  border: none; 
-}
-
-.slick-dots li {
-  margin: 0 5px; 
-}
-
-.slick-dots li.slick-active button {
-  background-color: #3182CE; 
-}
-
-
-.custom-dots {
   position: relative;
-  bottom: -20px;
-} */
+  margin: 0 4px; /* Adjust spacing between dots */
+  display: flex;
+  align-items: center;
+}
+
+.slick-dots li div {
+  height: 0.55rem;
+  width: 0.55rem;
+  background-color: #D1D5DB; /* Tailwind's gray-300 */
+  border-radius: 0.375rem; /* Rounded corners */
+  transition: background-color 0.3s, width 0.3s; /* Transition for width */
+}
+
+.slick-dots li.slick-active div {
+  background-color: #0b47ed; /* Tailwind's blue-800 */
+  border: 1px solid #143daf; /* Optional: Add a border to emphasize */
+  width: 1.5rem; /* Change width to line */
+}
 
 
 
@@ -145,7 +128,4 @@
 
 
 
-
-
-
-
+ 

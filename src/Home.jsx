@@ -10,6 +10,7 @@ import CampaignInfo from "./CampaignInfo";
 import NavBar from "./NavBar";
 
 function Home() {
+
   const messages = [
     "Unlock your B2B Success with science-based B2B marketing.",
     "Fuel your growth with data-driven, AI-powered B2B solutions.",
