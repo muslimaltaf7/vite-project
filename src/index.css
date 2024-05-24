@@ -122,6 +122,13 @@
 }
 
 
+.placeholder-custom::placeholder {
+  font-size: 17px; /* Adjust the font size as needed */
+  font-weight: bolder;
+  color: #929292;
+  
+}
+
 
 
 

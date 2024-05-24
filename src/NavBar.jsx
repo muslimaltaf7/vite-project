@@ -160,7 +160,7 @@ const NavBar = () => {
         </div>
         {/* Let's Talk Button */}
         <button className="bg-white hidden lg:block hover:bg-[#CC0047] hover:text-white text-[#CC0047] text-lg  py-[4px] px-6 rounded-full focus:outline-none mr-4 border border-[#CC0047]">
-          Let&apos;s Talk
+          <a href="/contact"> Let&apos;s Talk </a>
         </button>
         {/* Search Icon */}
 
