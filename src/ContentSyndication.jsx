@@ -8,6 +8,7 @@ import Tools from './Tools'
 import Ideas from './Ideas'
 import NavBar from './NavBar'
 import Footer from './Footer'
+import CardComponent from './CardComponent'
 
 
 const ContentSyndication = () => {
@@ -15,7 +16,7 @@ const ContentSyndication = () => {
     <div>
         <NavBar />
         <Hero/>
-        < Card />
+        < CardComponent />
         < Ideas />
         < CarouselComponent/>
         <Intro />
