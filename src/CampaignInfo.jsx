@@ -13,7 +13,7 @@ function CampaignInfo() {
           <svg
             viewBox="0 0 800 600"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-[1000px] h-[600px"
+            className="w-[1000px] h-[600px]"
           >
             <g stroke="black" strokeWidth="4" fill="none">
               <path d="M150 450 L650 450 Q670 450 670 430 L670 150 Q670 130 650 130 L150 130 Q130 130 130 150 L130 430 Q130 450 150 450 Z" />
@@ -46,7 +46,7 @@ function CampaignInfo() {
               </foreignObject>
             </g>
           </svg>
-          <div class="text-center px-2 py-4 mb-12">
+          <div class="text-center px-2 ">
             <a
               href="https://demandscience.com/resources/operation-content-syndication-make-your-b2b-content-soar/"
               class="inline-block text-[#D52C5A] font-bold px-6 py-2 rounded-full border border-gray-900 "
