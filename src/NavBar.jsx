@@ -67,7 +67,6 @@ const NavBar = () => {
           >
             <button
               onMouseOver={() => toggleDropdown("products")}
-              onMouseLeave={() => closeDropdowns()}
               className="text-lg focus:outline-none flex items-center font-medium"
             >
               Products{" "}
@@ -110,11 +109,13 @@ const NavBar = () => {
               </div>
             )}
           </div>
-          {/* Repeat the above block for other dropdowns */}
-          <div className="relative ml-4">
+          <div
+            onMouseEnter={() => clearTimeout(closeTimeout)}
+            onMouseLeave={() => closeDropdowns()}
+            className="relative ml-4"
+          >
             <button
               onMouseOver={() => toggleDropdown("ourData")}
-              onMouseLeave={() => closeDropdowns()}
               className="text-lg focus:outline-none flex items-center font-medium"
             >
               Our Data{" "}
@@ -157,24 +158,24 @@ const NavBar = () => {
               </div>
             )}
           </div>
-
-          <div className="relative ml-4">
+          <div
+            onMouseEnter={() => clearTimeout(closeTimeout)}
+            onMouseLeave={() => closeDropdowns()}
+            className="relative ml-4"
+          >
             <button className="text-lg focus:outline-none flex items-center font-medium">
-              About Us{" "}
+              About Us
             </button>
           </div>
         </div>
-        {/* Let's Talk Button */}
         <button className="bg-white hidden lg:block hover:bg-[#CC0047] hover:text-white text-[#CC0047] text-lg  py-[4px] px-6 rounded-full focus:outline-none mr-4 border border-[#CC0047]">
           <a href="/contact"> Let&apos;s Talk </a>
         </button>
-        {/* Hamburger Icon */}
         <FaBars
           className="block cursor-pointer lg:hidden text-2xl"
           onClick={toggleMobileMenu}
         />
       </div>
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white shadow-lg mt-2 rounded-lg">
           <a
@@ -224,7 +225,6 @@ const NavBar = () => {
               </div>
             )}
           </div>
-          {/* Repeat similar blocks for other dropdowns in the mobile menu */}
           <div className="relative">
             <button
               onClick={() => toggleDropdown("ourData")}
