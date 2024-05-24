@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Card = ({ title, imageSrc, altText, subtitle, titleColor }) => {
+
+const Card = ({ title, imageSrc, altText, subtitle, titleColor,Buttontext, Icon }) => {
   const titleStyle = {
     color: titleColor || '#05195F', // Default title color if not provided
   };
@@ -15,6 +16,7 @@ const Card = ({ title, imageSrc, altText, subtitle, titleColor }) => {
         <p className="text-gray-500 text-lg font-inter">
           {subtitle}
         </p>
+        <button className='text-[#F40356] font-bold flex w-full gap-1 justify-center items-end'>{Buttontext} {Icon}</button>
       </div>
     </div>
   );
