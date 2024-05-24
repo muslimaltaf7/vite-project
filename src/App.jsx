@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import PurePush from './Pure Push/PurePush';
 import ABM from './ABM';
 import Home from './Home'
+import OfficeLocations from './contact';
 
 
 const App = () => {
