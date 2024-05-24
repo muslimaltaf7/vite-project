@@ -1,24 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import { useState } from "react";
 import CardsHome from "./CardsHome";
 import Footer from "./Footer";
 import MQL from "./MQL";
 import LiveDataFactory from "./FactoryFlow";
 import Testimonials from "./Testiomonials";
 import CampaignInfo from "./CampaignInfo";
-import NavBar from "./NavBar";
+import { FaBars } from "react-icons/fa";
+import { MdKeyboardArrowDown } from "react-icons/md";
+
 
 function Home() {
-
   const messages = [
     "Unlock your B2B Success with science-based B2B marketing.",
     "Fuel your growth with data-driven, AI-powered B2B solutions.",
     "Your success, Our commitment. Proudly, the trusted partner in B2B Demand Generation.",
-    "Maximize your investment: Solutions designed to supercharge your demand generation ROI.",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [dropdowns, setDropdowns] = useState({
+    products: false,
+    ourData: false,
+  });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleDropdown = (dropdown) => {
+    setDropdowns((prev) => ({
+      ...prev,
+      [dropdown]: !prev[dropdown],
+    }));
+  };
+
+  const closeDropdowns = () => {
+    setDropdowns({
+      products: false,
+      ourData: false,
+    });
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prevState) => !prevState);
+  };
 
   const handlers = useSwipeable({
     onSwipedLeft: () => setCurrentIndex((currentIndex + 1) % messages.length),
@@ -46,34 +68,35 @@ function Home() {
             Supercharge Your Pipeline.
           </h1>
 
-          <div className="mt-8 w-full px-4 sm:px-8 text-center" {...handlers}>
-            <div className="whitespace-nowrap transition-transform duration-500 ease-in-out">
-              <div className="inline-block px-4 py-4">
-                <p className="text-center text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-widest font-inter">
-                  {messages[currentIndex]}
-                </p>
+            <div className="mt-8 w-full px-4 sm:px-8 text-center" {...handlers}>
+              <div className="whitespace-nowrap transition-transform duration-500 ease-in-out">
+                <div className="inline-block px-4 py-4">
+                  <p className="text-center text-white text-base sm:text-lg p-0 m-0  md:text-lg lg:text-1xl xl:text-2xl tracking-widest font-inter">
+                    {messages[currentIndex]}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="mt-8 py-6 hover:scale-105">
-            <a
-              className="px-6 py-2 sm:px-8 sm:py-3 font-bold text-lg sm:text-xl bg-[#CC0047] text-white rounded-full"
-              href="https://demandscience.com/products/"
-            >
-              Learn More
-            </a>
+            <div className="mt-8 py-6 hover:scale-105">
+              <a
+                className="px-6 py-2 sm:px-8 sm:py-3 font-bold text-lg sm:text-xl bg-[#CC0047] text-white rounded-full"
+                href="https://demandscience.com/products/"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
         </div>
+        <CardsHome />
+        <MQL />
+        <LiveDataFactory />
+        <Testimonials />
+        <CampaignInfo />
+        <Footer />
       </div>
-      <CardsHome />
-      <MQL />
-      <LiveDataFactory />
-      <Testimonials />
-      <CampaignInfo />
-      <Footer />
-    </div>
     </>
   );
 }
+
 export default Home;

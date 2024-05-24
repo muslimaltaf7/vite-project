@@ -7,6 +7,8 @@ import ABM from './ABM';
 import Home from './Home'
 import LetsTalk from './Lets Talk/LetsTalk';
 
+import OfficeLocations from './address';
+import TrustedCompanies from './TrustedCompanies';
 
 const App = () => {
   return (
