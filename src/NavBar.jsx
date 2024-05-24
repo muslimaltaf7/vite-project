@@ -166,15 +166,21 @@ const NavBar = () => {
         </div>
         {/* Let's Talk Button */}
         <button className="bg-white hidden lg:block hover:bg-[#CC0047] hover:text-white text-[#CC0047] text-lg  py-[4px] px-6 rounded-full focus:outline-none mr-4 border border-[#CC0047]">
-          Let&apos;s Talk
+          Let's Talk
         </button>
         {/* Hamburger Icon */}
-        <FaBars className="block cursor-pointer lg:hidden text-2xl" onClick={toggleMobileMenu} />
+        <FaBars
+          className="block cursor-pointer lg:hidden text-2xl"
+          onClick={toggleMobileMenu}
+        />
       </div>
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white shadow-lg mt-2 rounded-lg">
-          <a href="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+          <a
+            href="/"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+          >
             Home
           </a>
           <div className="relative">
@@ -260,11 +266,14 @@ const NavBar = () => {
               </div>
             )}
           </div>
-          <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+          <a
+            href="#"
+            className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+          >
             About Us
           </a>
           <button className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mt-4 mx-4 w-[calc(100%-2rem)]">
-            Let&apos;s Talk
+            Let's Talk
           </button>
         </div>
       )}
