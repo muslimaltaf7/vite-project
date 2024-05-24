@@ -270,14 +270,14 @@ function Home() {
             src="https://demandscience.com/wp-content/uploads/2023/10/futuristic-background.mp4"
           ></video>
           <div className="relative flex flex-col items-center justify-center h-full cursor-pointer bg-black bg-opacity-50">
-            <h1 className="text-center text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-semibold">
+            <h1 className="text-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-semibold">
               Supercharge Your Pipeline.
             </h1>
 
             <div className="mt-8 w-full px-4 sm:px-8 text-center" {...handlers}>
               <div className="whitespace-nowrap transition-transform duration-500 ease-in-out">
                 <div className="inline-block px-4 py-4">
-                  <p className="text-center text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-widest font-inter">
+                  <p className="text-center text-white text-base sm:text-lg  md:text-lg lg:text-1xl xl:text-2xl tracking-widest font-inter">
                     {messages[currentIndex]}
                   </p>
                 </div>
