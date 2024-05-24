@@ -8,6 +8,7 @@ import Testimonials from "./Testiomonials";
 import CampaignInfo from "./CampaignInfo";
 import { FaBars } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { Route } from "react-router-dom";
 
 function Home() {
   const messages = [
@@ -254,9 +255,12 @@ function Home() {
                 >
                   About Us
                 </a>
-                <button className="bg-[#CC0047] text-white text-lg py-2 px-6 rounded-full focus:outline-none mx-4 my-4 w-[calc(100%-2rem)]">
+                <href
+                  to="/contact"
+                  className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mx-4 my-4 w-[calc(100%-2rem)]"
+                >
                   Let&apos;s Talk
-                </button>
+                </href>
               </div>
             )}
           </nav>

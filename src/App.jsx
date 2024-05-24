@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from './NavBar'
 import ContentSyndication from './ContentSyndication';
 import { Routes, Route } from "react-router-dom";
 import PurePush from './Pure Push/PurePush';
