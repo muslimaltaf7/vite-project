@@ -9,6 +9,7 @@ import CampaignInfo from "./CampaignInfo";
 import { FaBars } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
+
 function Home() {
   const messages = [
     "Unlock your B2B Success with science-based B2B marketing.",
@@ -49,8 +50,6 @@ function Home() {
     trackMouse: true,
   });
 
-  let closeTimeout;
-
   return (
     <>
       <div className="min-h-screen">
@@ -66,11 +65,7 @@ function Home() {
                 </a>
               </div>
               <div className="lg:flex hidden justify-center flex-grow gap-6">
-                <div
-                  onMouseEnter={() => clearTimeout(closeTimeout)}
-                  onMouseLeave={() => closeDropdowns()}
-                  className="relative ml-4"
-                >
+                <div className="relative ml-4">
                   <a
                     href="/"
                     className="text-lg focus:outline-none flex items-center font-medium"
@@ -78,11 +73,7 @@ function Home() {
                     Home
                   </a>
                 </div>
-                <div
-                  onMouseEnter={() => clearTimeout(closeTimeout)}
-                  onMouseLeave={() => closeDropdowns()}
-                  className="relative ml-4"
-                >
+                <div className="relative ml-4">
                   <button
                     onMouseOver={() => toggleDropdown("products")}
                     className="text-lg focus:outline-none flex items-center gap-1 font-medium"
@@ -92,7 +83,6 @@ function Home() {
                   {dropdowns.products && (
                     <div
                       className="absolute bg-white mt-2 py-2 w-48 rounded-lg shadow-lg"
-                      onMouseEnter={() => clearTimeout(closeTimeout)}
                       onMouseLeave={() => closeDropdowns()}
                     >
                       <a
@@ -122,11 +112,7 @@ function Home() {
                     </div>
                   )}
                 </div>
-                <div
-                  onMouseEnter={() => clearTimeout(closeTimeout)}
-                  onMouseLeave={() => closeDropdowns()}
-                  className="relative ml-4"
-                >
+                <div className="relative ml-4">
                   <button
                     onMouseOver={() => toggleDropdown("ourData")}
                     className="text-lg focus:outline-none flex items-center gap-1 font-medium"
@@ -136,7 +122,6 @@ function Home() {
                   {dropdowns.ourData && (
                     <div
                       className="absolute bg-white mt-2 py-2 w-48 rounded-lg shadow-lg"
-                      onMouseEnter={() => clearTimeout(closeTimeout)}
                       onMouseLeave={() => closeDropdowns()}
                     >
                       <a
@@ -176,11 +161,17 @@ function Home() {
               <button className="bg-white hidden lg:block hover:bg-[#CC0047] hover:text-white text-[#CC0047] text-lg py-[4px] px-6 rounded-full focus:outline-none mr-4 border border-[#CC0047]">
                 Let&apos;s Talk
               </button>
-              <FaBars className="block cursor-pointer lg:hidden text-2xl" onClick={toggleMobileMenu} />
+              <FaBars
+                className="block cursor-pointer lg:hidden text-2xl"
+                onClick={toggleMobileMenu}
+              />
             </div>
             {isMobileMenuOpen && (
               <div className="lg:hidden bg-white shadow-lg mt-2 rounded-lg">
-                <a href="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                <a
+                  href="/"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
                   Home
                 </a>
                 <div className="relative">
@@ -227,7 +218,10 @@ function Home() {
                     Our Data <MdKeyboardArrowDown />
                   </button>
                   {dropdowns.ourData && (
-                    <div className="bg-white py-2 w-full rounded-lg shadow-lg">
+                    <div
+                      className="bg-white py-2 w-full rounded-lg shadow-lg"
+                      onMouseLeave={() => closeDropdowns()}
+                    >
                       <a
                         href="#"
                         className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
@@ -255,7 +249,10 @@ function Home() {
                     </div>
                   )}
                 </div>
-                <a href="/aboutus" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                <a
+                  href="/aboutus"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
                   About Us
                 </a>
                 <button className="bg-[#CC0047] text-white text-lg py-2 px-6 rounded-full focus:outline-none mx-4 my-4 w-[calc(100%-2rem)]">
