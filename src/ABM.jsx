@@ -6,11 +6,12 @@ import ABMIntro from './ABMIntro'
 import ABMStrategy from './ABMStrategy'
 import ABMAccordion from './ABMAccordion'
 import Footer from './Footer'
-
+import NavBar from './NavBar'
 
 const ABM = () => {
   return (
     <div>
+      <NavBar />
       <ABMHero /> 
       <ABMCard />
       <ABMTitle />

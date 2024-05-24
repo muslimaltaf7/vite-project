@@ -16,7 +16,7 @@ const App = () => {
       <Route path="/" element={<Home/>} />
         <Route path="contentSyndication" element={<ContentSyndication/>} />
         <Route path="purepush" element={<PurePush/>} />
-        <Route path="ABM" element={<ABM />} />
+        <Route path="abmpage" element={<ABM />} />
       </Routes>
      
     </div>
