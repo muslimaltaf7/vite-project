@@ -8,6 +8,7 @@ import Testimonials from "./Testiomonials";
 import CampaignInfo from "./CampaignInfo";
 import { FaBars } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import NavBar from "./NavBar";
 
 
 function Home() {
