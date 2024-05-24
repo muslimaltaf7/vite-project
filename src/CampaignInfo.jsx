@@ -2,7 +2,7 @@ import React from "react";
 
 function CampaignInfo() {
   return (
-    <div className="flex flex-col space-y-0 ">
+    <div className="flex flex-col px-4 ">
       <div className="text-center">
         <h2 className="text-2xl md:text-4xl mt-24 font-bold text-center  text-[#05195F]">
           Everything you need to know about high‑performing <br /> campaigns.
@@ -13,7 +13,7 @@ function CampaignInfo() {
           <svg
             viewBox="0 0 800 600"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-[1000px] h-[600px]"
+            className="w-[1000px] h-[600px"
           >
             <g stroke="black" strokeWidth="4" fill="none">
               <path d="M150 450 L650 450 Q670 450 670 430 L670 150 Q670 130 650 130 L150 130 Q130 130 130 150 L130 430 Q130 450 150 450 Z" />
