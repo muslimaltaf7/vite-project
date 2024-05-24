@@ -1,4 +1,6 @@
 import React from "react";
+import Card from "./Card";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const CardsHome = () => {
   const products = [
@@ -34,84 +36,53 @@ const CardsHome = () => {
         "Transform your marketing with precision insights and targeting.",
     },
   ];
+  let arrow = <MdOutlineKeyboardArrowRight className="text-xl" />
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="container mx-auto p-4">
-        <div className="text-center">
+    <div className="container w-full mx-auto p-4">
+      <div className="container w-full mx-auto p-4">
+        <div className="text-center w-full">
           <h2
-            className="text-xl font-semibold"
+            className="text-3xl text-[#05195F] font-semibold font-poppins tracking-wider leading-10"
             id="h-optimized-roi-unrivaled-results-demand-generation-solutions-that-deliver"
           >
-            Optimized ROI, Unrivaled Results. Demand Generation Solutions that
-            Deliver.
+            Optimized ROI, Unrivaled Results. Demand Generation
+            <br /> Solutions that Deliver.
           </h2>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4">
-        {products.map((product, index) => {
-          // For the fourth card, span it across the middle column
-          if (index === 3) {
-            return (
-              <div
-                key={index}
-                className="col-span-3 sm:col-span-1 sm:col-start-2 p-4 border rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              >
-                <a
-                  href={product.href}
-                  className="flex flex-col items-center text-center"
-                >
-                  <img
-                    src={product.imgSrc}
-                    alt={product.title}
-                    className="w-1/3 mb-4"
-                  />
-                  <h3 className="text-xl font-bold mb-2">{product.title}</h3>
-                  <p className="text-gray-600 mb-4">{product.description}</p>
-                  <button className="flex items-center bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                    See How
-                    <img
-                      src="https://demandscience.com/wp-content/plugins/demand-science-custom-blocks/product-suite-list-item/build/images/cta-action-image.c2285773.png"
-                      alt="Call to Action Icon"
-                      className="ml-2"
-                      width="24px"
-                      height="auto"
-                    />
-                  </button>
-                </a>
-              </div>
-            );
-          }
-          return (
-            <div
-              key={index}
-              className="p-4 border rounded-lg shadow-md hover:shadow-lg transition-shadow"
-            >
-              <a
-                href={product.href}
-                className="flex flex-col items-center text-center"
-              >
-                <img
-                  src={product.imgSrc}
-                  alt={product.title}
-                  className="w-1/3 mb-4"
-                />
-                <h3 className="text-xl font-bold mb-2">{product.title}</h3>
-                <p className="text-gray-600 mb-4">{product.description}</p>
-                <button className="flex items-center bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                  See How
-                  <img
-                    src="https://demandscience.com/wp-content/plugins/demand-science-custom-blocks/product-suite-list-item/build/images/cta-action-image.c2285773.png"
-                    alt="Call to Action Icon"
-                    className="ml-2"
-                    width="24px"
-                    height="auto"
-                  />
-                </button>
-              </a>
-            </div>
-          );
-        })}
+      <div className="grid w-[70%] mx-auto lg:grid-cols-3 gap-x-24 gap-y-6">
+        <Card
+          title="PureSyndication"
+          imageSrc="https://demandscience.com/wp-content/uploads/2023/02/content-syndication-1.svg"
+          subtitle="Use the content you have to get the leads that you want."
+          Buttontext="See How"
+          Icon={arrow}
+        />
+        <Card
+          title="PurePush"
+          imageSrc="https://demandscience.com/wp-content/uploads/2023/03/pure-push.svg"
+          subtitle="Connect with highly-qualified leads who are closer to purchase"
+          Buttontext="See How"
+          Icon={arrow}
+        />
+
+        <Card
+          title="ABM Display"
+          imageSrc="https://demandscience.com/wp-content/uploads/2023/02/abm-display-advertising-1.svg"
+          subtitle="Get the right ads to in-market buyers at your dream accounts."
+          Buttontext="See How"
+          Icon={arrow}
+        />
+        <div></div>
+
+        <Card
+          title="Account Intelligence"
+          imageSrc="https://demandscience.com/wp-content/uploads/2023/02/prospect-data-1.svg"
+          subtitle="Transform your marketing with precision insights and targeting."
+          Buttontext="See How"
+          Icon={arrow}
+        />
       </div>
     </div>
   );

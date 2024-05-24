@@ -10,7 +10,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 const OfficeLocations = () => {
     return (
-        <div className="flex flex-col items-center py-12 px-4 bg-gray-100">
+        <div className="flex flex-col items-center py-12 px-4 bg-white">
             <h1 className="text-4xl font-bold text-center text-blue-950 mb-8">Our Offices</h1>
             <div className="w-full max-w-5xl">
                 <img

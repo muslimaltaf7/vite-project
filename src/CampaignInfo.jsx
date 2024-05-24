@@ -2,7 +2,7 @@ import React from "react";
 
 function CampaignInfo() {
   return (
-    <div className="flex flex-col space-y-0 ">
+    <div className="flex flex-col px-4 ">
       <div className="text-center">
         <h2 className="text-2xl md:text-4xl mt-24 font-bold text-center  text-[#05195F]">
           Everything you need to know about high‑performing <br /> campaigns.
@@ -46,7 +46,7 @@ function CampaignInfo() {
               </foreignObject>
             </g>
           </svg>
-          <div class="text-center px-2 py-4 mb-12">
+          <div class="text-center px-2 ">
             <a
               href="https://demandscience.com/resources/operation-content-syndication-make-your-b2b-content-soar/"
               class="inline-block text-[#D52C5A] font-bold px-6 py-2 rounded-full border border-gray-900 "

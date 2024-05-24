@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero from './Hero'
-import Card from './card'
 import CarouselComponent from './CarouselComponent'
 import Intro from './Intro'
 import Accordion from './Accordion'
