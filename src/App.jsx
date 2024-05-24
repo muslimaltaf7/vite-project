@@ -7,7 +7,7 @@ import PurePush from './Pure Push/PurePush';
 import ABM from './ABM';
 import Home from './Home'
 import OfficeLocations from './contact';
-
+import TrustedCompanies from './TrustedCompanies';
 
 const App = () => {
   return (
