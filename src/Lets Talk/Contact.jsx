@@ -12,7 +12,7 @@ const Contact = () => {
 
   return (
     
-    <div className="grid lg:grid-cols-2 w-[77%] mx-auto font-poppins py-14 gap-10">
+    <div className="grid lg:grid-cols-1 xl:grid-cols-2 w-[77%] mx-auto font-poppins py-14 gap-10">
       <div className="md:text-left flex flex-col gap-6 py-24">
         <h1 className="text-[46px] text-[#05195F] font-semibold md:leading-relaxed tracking-wide">
           Get in touch about <br /> our products
@@ -27,7 +27,7 @@ const Contact = () => {
           className="mx-auto w-[550px]"
         />
       </div>
-      <div className="flex bg-[#F8F8F8] items-center justify-center mb-4 rounded-xl border-2 border-black py-10">
+      <div className="flex bg-[#F8F8F8] justify-center mb-4 rounded-xl border-2 border-black py-10">
         <div className=" sm:px-10 px-2 font-inter w-full">
           <h2 className="text-3xl font-semibold mb-4 text-center text-[#05195F] ">
             How can we help you?
