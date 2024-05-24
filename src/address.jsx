@@ -6,7 +6,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { HiOutlineLocationMarker } from "react-icons/hi";
+
 
 const OfficeLocations = () => {
     return (
