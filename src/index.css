@@ -122,6 +122,32 @@
 }
 
 
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.marquee-content {
+  display: flex;
+  animation: marquee-animation 20s linear infinite;
+}
+
+
+.marquee-item {
+  flex: none;
+  margin-right: 120px; /* Add spacing between logos */
+}
+@keyframes marquee-animation {
+  0%{
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 
 
