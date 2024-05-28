@@ -8,33 +8,36 @@ import Intro from "./Components/Intro";
 import Accordion from "./Components/Accordion";
 import Tool from "./Components/Tool";
 import AnimatedTool from "./Components/AnimatedTool";
-import Footer from "./Components/Footer"
+import Footer from "./Components/Footer";
+import Leads from "./Components/PurePush/Leads";
 
-const ContentSyndication = () => {
+const PurePush = () => {
   const cardData = [
     {
-      title: "Accurate ICP",
+      title: "Right person",
       imageSrc:
-        "https://demandscience.com/wp-content/uploads/2023/03/accurate-icp-1.png",
-      altText: "Accurate ICP",
-      subtitle: "Reach your target audience with four layers of intent data.",
+        "https://demandscience.com/wp-content/uploads/2023/02/right-person2-1.svg",
+      altText: "Right person",
+      subtitle:
+        "Target way beyond ICP to get to people with authority and budget to do business.",
       titleColor: "#05195F",
     },
     {
-      title: "Increased ROI",
+      title: "Right data",
       imageSrc:
-        "https://demandscience.com/wp-content/uploads/2023/02/increased-roi-1.png",
+        "https://demandscience.com/wp-content/uploads/2023/02/right-data2-1.svg",
       altText: "Increased ROI",
-      subtitle: "Get up to 12x ROI compared to the competition.",
+      subtitle:
+        "Enrich your CRM in real time with accurate, high-quality data.",
       titleColor: "#05195F",
     },
     {
-      title: "Guaranteed CPL",
+      title: "Right time",
       imageSrc:
-        "https://demandscience.com/wp-content/uploads/2023/02/guaranteed-cpl-1-1.png",
+        "https://demandscience.com/wp-content/uploads/2023/02/right-time2-1.svg",
       altText: "Guaranteed CPL",
       subtitle:
-        "Know your cost per lead ahead of time so you can maximize your budget.",
+        "Meet the customer with a need for your product or service now, not later.",
       titleColor: "#05195F",
       span: "md:col-span-2 lg:col-span-1",
     },
@@ -74,18 +77,22 @@ const ContentSyndication = () => {
     <>
       <NavBar />
       <Hero
-        heading="Content Syndication"
-        subheading="Get leads that convert with content syndication."
-        description="Content Syndication delivers high-quality opt-in leads for your campaigns."
-        animationurl="https://lottie.host/05c80f31-613b-4cf8-8021-a737bf99f1c1/4X2fWr6aBb.json"
+        heading="PurePush"
+        subheading="Turn your leads into buyers, faster."
+        description="PurePush provides you with mid and bottom funnel prospects who are closer to the close."
+        animationurl="https://lottie.host/d39761af-8d64-4de4-acf0-bf5ece21e075/NzfEXq2sOe.json"
       />
-      <div className="flex flex-col justify-center items-center pt-24 pb-5 px-2">
+      <div className="flex flex-col gap-2 justify-center items-center pt-24 pb-5 px-2 sm:w-[40%] mx-auto">
         <h1
           className="text-[36px] font-semibold  text-center font-poppins"
           style={{ color: "#05195F" }}
         >
-          Campaigns that fill the entire funnel.
+          Get leads that are prepped and ready for you.
         </h1>
+        <p className="text-center text-xl">
+          PurePush asks the questions to identify more qualified leads with a
+          higher probability of making a purchase.
+        </p>
       </div>
       <div className="w-full flex flex-col justify-center items-center bg-white rounded-lg p-2 sm:p-4">
         <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -105,6 +112,9 @@ const ContentSyndication = () => {
           ))}
         </div>
       </div>
+      <div>
+        <Leads Heading1={"HQL"} description1={"Accelerate toward your business goals with PurePush Highly Qualified Leads (HQL). Not only are these leads qualified by ICP and intent, they are further verified to have a need and a timeframe that fits with your parameters for a great lead."} Heading2={"HQL+"} description2={"Get HQL+ when you need to add another layer of qualification to ensure the person you’re talking to is not only showing buying signals, but also has the right budget and authority to do business with you now."}/>
+      </div>
       <div className="py-8 px-4">
         <Ideas heading="Fill the funnel with your ideal buyers." />
       </div>
@@ -117,7 +127,7 @@ const ContentSyndication = () => {
         />
       </div>
       <Accordion heading="Content Syndication FAQ" items={accordionItems} />
-      <div className="w-full sm:px-36 p-4" >
+      <div className="w-full sm:px-36 p-4">
         <Tool
           title="Capture qualified leads that keep on coming."
           description="Our Quickstart Guide explains the benefits of using content syndication and how to choose the right partner (wink-wink)."
@@ -135,4 +145,4 @@ const ContentSyndication = () => {
   );
 };
 
-export default ContentSyndication;
+export default PurePush;
