@@ -235,15 +235,15 @@ const Footer = () => {
       </div>
       <div className="w-full">
           <hr className="border-5 border-gray-200" />
-        <div class="flex w-full flex-col sm:flex-row justify-between sm:justify-center items-center py-10">
-          <div class="flex justify-start w-full">
-            <p class="text-white text-sm text-center">
+        <div class="flex w-full flex-col md:flex-col lg:flex-row xl:flex-row sm:space-y-5 md:space-y-5 sm:flex-col lg:space-y-0 py-10">
+          <div class="flex sm:justify-center xl:justify-start w-full">
+            <p class="text-white text-sm">
               ©2024 DemandScience US, LLC All Rights Reserved
             </p>
           </div>
  
-          <div class="flex justify-end w-full sm:text-center">
-            <p class="text-right text-white text-sm">
+          <div class="flex sm:justify-center xl:justify-end w-full">
+            <p class="text-white text-sm">
               <a
                 href="https://demandscience.com/privacy-policy-ccpa/"
                 class="hover:underline"
