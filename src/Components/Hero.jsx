@@ -30,5 +30,6 @@ const Hero = ({ heading, subheading, description, animationurl, imageUrl }) => {
     </div>
   );
 };
-
+ 
 export default Hero;
+ 
