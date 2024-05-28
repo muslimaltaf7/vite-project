@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import CardsHome from "./CardsHome";
-import Footer from "./Footer";
+// import CardsHome from "./CardsHome";
+import Footer from "./Components/Footer";
 import MQL from "./MQL";
-import LiveDataFactory from "./FactoryFlow";
-import Testimonials from "./Testiomonials";
-import CampaignInfo from "./CampaignInfo";
+// import LiveDataFactory from "./FactoryFlow";
+import Testimonials from "./Components/Testiomonials";
+// import CampaignInfo from "./CampaignInfo";
 import { FaBars } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { Route } from "react-router-dom";
 
 function Home() {
   const messages = [
@@ -297,11 +296,11 @@ function Home() {
             </div>
           </div>
         </div>
-        <CardsHome />
+        {/* <CardsHome /> */}
         <MQL />
-        <LiveDataFactory />
+        {/* <LiveDataFactory /> */}
         <Testimonials />
-        <CampaignInfo />
+        {/* <CampaignInfo /> */}
         <Footer />
       </div>
     </>
