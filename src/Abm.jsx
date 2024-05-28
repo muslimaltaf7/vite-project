@@ -9,8 +9,10 @@ import Accordion from "./Components/Accordion";
 import Tool from "./Components/Tool";
 import AnimatedTool from "./Components/AnimatedTool";
 import Footer from "./Components/Footer"
+import ABMTitle from "./Components/AbmComponents/ABMTitle";
+import ABMStrategy from "./Components/AbmComponents/ABMStrategy";
 
-const ContentSyndication = () => {
+const Abm = () => {
   const cardData = [
     {
       title: "Accurate ICP",
@@ -42,14 +44,14 @@ const ContentSyndication = () => {
 
   const accordionItems = [
     {
-      title: "How does content syndication work?",
+      title: "What is DemandScience ABM Display",
       content:
-        "Content syndication refers to the strategic republishing of content to expose it to a much larger audience in order to educate, engage, and qualify new leads. In a practical sense, that means your chosen piece of content, let’s say an ebook, is shared with the segment of our audience that matches your criteria. If viewers of that site, or members of that list are interested, they visit a landing page, fill out a form, and receive your content offer. You then receive a list of leads that you can nurture.",
+        "DemandScience’s Account-Based Marketing (ABM) Display advertising service intelligently targets your high-priority accounts. The ABM advertising platform is intentionally designed for B2B, to help marketers reach the right businesses and the right buyers at the right time. It helps identify your best-fit accounts, activate ABM advertising engagement, and accelerate your pipeline. ",
     },
     {
-      title: "What are the main advantages of content syndication?",
+      title: "Where are my ads served?",
       content:
-        "With content syndication, you can use existing content to attract in-market buyers in your chosen ICP. This helps you stretch the ROI of your content marketing efforts, and attract new leads at the top of the funnel.",
+        "All ad campaigns are served on our brand-safe advertising platform. We have access to all major inventory sources across multiple exchanges including; Google Exchange, Rubicon, PubMatic, Open X, Xandr, and 33across. This allows us to deliver across thousands of content sites such as Business Insider, Forbes, Digital Trends, Wired, Washington Post, Yahoo News, Fox News, CNN.com, Weather.com, and so many more. While we seek to deliver ads on B2B content sites, we do not only serve on B2B sites. Our focus is on finding the buying committee where they choose to be online and delivering impressions at the account level, so you can measure your ad campaign’s influence in driving engagement across the account.",
     },
     {
       title: "What makes your content syndication campaigns unique?",
@@ -73,12 +75,15 @@ const ContentSyndication = () => {
   return (
     <>
       <NavBar />
+      <div>
       <Hero
-        heading="Content Syndication"
-        subheading="Get leads that convert with content syndication."
-        description="Content Syndication delivers high-quality opt-in leads for your campaigns."
-        imageurl="https://lottie.host/05c80f31-613b-4cf8-8021-a737bf99f1c1/4X2fWr6aBb.json"
+        heading="ABM Display"
+        subheading="Move leads forward with ABM Display."
+        description="Accelerate your growth with targeted ads to the accounts you really want."
+        imageUrl="/abm-4.svg"
       />
+      </div>
+     
       <div className="flex flex-col justify-center items-center pt-24 pb-5 px-2">
         <h1
           className="text-[36px] font-semibold  text-center font-poppins"
@@ -105,8 +110,8 @@ const ContentSyndication = () => {
           ))}
         </div>
       </div>
-      <div className="py-8 px-4">
-        <Ideas heading="Fill the funnel with your ideal buyers." />
+      <div className="pt-[80px]">
+      <ABMTitle />
       </div>
       <Carousel />
       <div className="py-12">
@@ -116,7 +121,8 @@ const ContentSyndication = () => {
           image={image1}
         />
       </div>
-      <Accordion heading="Content Syndication FAQ" items={accordionItems} />
+      <ABMStrategy />
+      <Accordion heading="ABM Display FAQ" items={accordionItems} />
       <div className="w-full sm:px-36 p-4" >
         <Tool
           title="Capture qualified leads that keep on coming."
@@ -135,4 +141,4 @@ const ContentSyndication = () => {
   );
 };
 
-export default ContentSyndication;
+export default Abm;

@@ -1,5 +1,6 @@
 import React from 'react';
 import ContentSyndication from './ContentSyndication';
+import Abm from './Abm';
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       
       <Routes>
       <Route path="contentSyndication" element={<ContentSyndication/>} />
+      <Route path="abmpage" element={<Abm />} />
       {/* <Route path="/" element={<Home/>} />
         <Route path="contentSyndication" element={<ContentSyndication/>} />
         <Route path="purepush" element={<PurePush/>} />
