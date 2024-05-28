@@ -34,7 +34,7 @@
   font-weight: 600;
   color: #05195F;
   font-family: 'Poppins', sans-serif;
-  text-indent: left;
+  /* text-indent: left; */
   padding-left: 10px;
   margin: 0;
   display: inline-block;

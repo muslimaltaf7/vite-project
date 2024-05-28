@@ -1,12 +1,9 @@
 import React from "react";
-import Card from "./Card";
+import Card from "./card";
 
 const CardComponent = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-24">
-      <h1 className="text-[36px] font-semibold mb-11 text-center font-poppins" style={{ color: '#05195F' }}>
-        Campaigns that fill the entire funnel.
-      </h1>
+    
       <div className="w-full flex flex-col justify-center items-center bg-white rounded-lg p-4">
         <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <Card
@@ -34,7 +31,7 @@ const CardComponent = () => {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import dropdownIcon from "./assets/icons8-dropdown-50.png";
+import dropdownIcon from "../assets/icons8-dropdown-50.png";
 import { FaBars } from "react-icons/fa";
 
 const NavBar = () => {

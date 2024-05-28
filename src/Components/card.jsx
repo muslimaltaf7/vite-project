@@ -7,7 +7,7 @@ const Card = ({ title, imageSrc, altText, subtitle, titleColor,Buttontext, Icon 
   };
 
   return (
-    <div className="bg-[#F8F8F8] shadow-md rounded-lg flex flex-col items-center w-80 h-100">
+    <div className="bg-[#F8F8F8] rounded-lg flex flex-col items-center w-80  px-2 py-4">
       <img src={imageSrc} alt={altText} className="w-40 h-54 object-cover pt-6" />
       <div className="p-6 text-center">
         <h2 className="text-[30px] font-poppins font-semibold py-[3px] text-blue-950" style={titleStyle}>

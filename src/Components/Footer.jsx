@@ -1,5 +1,5 @@
 import React from "react";
-
+ 
 const Footer = () => {
   return (
     <div className="flex flex-1 flex-col mt-36 sm:space-x-10 flex-wrap md:flex-row w-full lg:flex-row sm:flex-row bg-cover min-h-[907.88px] bg-no-repeat bg-center  bg-[url('images/footer-bg.webp')] py-24 px-10 text-white">
@@ -109,10 +109,10 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-row lg:space-x-10 text-lg lg:flex-row md:flex-col sm:flex-col flex-1 xl:justify-around justify-between md:mr-8 text-white">
+      <div className="lg:flex flex-row sm:grid lg:space-x-10 text-lg lg:flex-row md:flex-col sm:flex-col flex-1 xl:justify-around justify-between md:mr-8 text-white">
         <div className="mb-8 md:mb-0">
-          <p className="font-bold">PRODUCTS</p>
-          <nav className="mt-4">
+          <p className="font-sans text-sm font-bold">PRODUCTS</p>
+          <nav className="mt-4 text-sm">
             <ul className="space-y-2">
               <li>
                 <a
@@ -143,10 +143,10 @@ const Footer = () => {
             </ul>
           </nav>
         </div>
-
+ 
         <div className="mb-8 text-lg md:mb-0 text-white">
-          <p className="font-bold">OUR DATA</p>
-          <nav className="mt-4">
+          <p className="font-bold text-sm font-sans">OUR DATA</p>
+          <nav className="mt-4 text-sm">
             <ul className="space-y-2">
               <li>
                 <a href="/data" className="hover:underline">
@@ -155,7 +155,7 @@ const Footer = () => {
               </li>
             </ul>
           </nav>
-          <p className="font-bold mt-8">WHO WE SERVE</p>
+          <p className="font-bold text-sm mt-8 font-sans">WHO WE SERVE</p>
           <nav className="mt-4">
             <ul className="space-y-2">
               <li>
@@ -178,13 +178,16 @@ const Footer = () => {
           </nav>
         </div>
       </div>
-      <div className="flex flex-row lg:space-x-10 text-lg lg:flex-row md:flex-col sm:flex-col flex-1 xl:justify-around justify-between md:mr-8 text-white">
-        <div className="mb-8 text-lg  text-white">
-          <p className="font-bold">RESOURCES</p>
-          <nav className="mt-4">
+      <div className="lg:flex flex-row sm:grid lg:space-x-10 text-lg lg:flex-row md:flex-col sm:flex-col flex-1 xl:justify-around justify-between md:mr-8 text-white">
+        <div className="mb-8 md:mb-0">
+          <p className="font-bold font-sans text-sm">RESOURCES</p>
+          <nav className="mt-4 text-sm">
             <ul className="space-y-2">
               <li>
-                <a href="/resources" className="hover:underline">
+                <a
+                  href="/resources"
+                  className="hover:underline"
+                >
                   Resource Center
                 </a>
               </li>
@@ -201,40 +204,28 @@ const Footer = () => {
             </ul>
           </nav>
         </div>
-
-        <div className="mb-8 md:mb-0 text-lg text-white">
-          <p className="font-bold">COMPANY</p>
-          <nav className="mt-4">
+ 
+        <div className="mb-8 text-lg md:mb-0 text-white">
+          <p className="font-bold font-sans text-sm">COMPANY</p>
+          <nav className="mt-4 text-sm">
             <ul className="space-y-2">
               <li>
-                <a
-                  href="https://demandscience.com/about/"
-                  className="hover:underline"
-                >
+                <a href="https://demandscience.com/about/" className="hover:underline">
                   About
                 </a>
               </li>
               <li>
-                <a
-                  href="https://demandscience.com/careers/"
-                  className="hover:underline"
-                >
+                <a href="https://demandscience.com/careers/" className="hover:underline">
                   Careers
                 </a>
               </li>
               <li>
-                <a
-                  href="https://demandscience.com/press-releases/"
-                  className="hover:underline"
-                >
+                <a href="https://demandscience.com/press-releases/" className="hover:underline">
                   Press
                 </a>
               </li>
               <li>
-                <a
-                  href="https://demandscience.com/contact/"
-                  className="hover:underline"
-                >
+                <a href="https://demandscience.com/contact/" className="hover:underline">
                   Contact
                 </a>
               </li>
@@ -244,14 +235,14 @@ const Footer = () => {
       </div>
       <div className="w-full">
           <hr className="border-5 border-gray-200" />
-        <div class="flex w-full flex-col sm:flex-row justify-between items-center py-10">
+        <div class="flex w-full flex-col sm:flex-row justify-between sm:justify-center items-center py-10">
           <div class="flex justify-start w-full">
-            <p class="text-white text-sm">
+            <p class="text-white text-sm text-center">
               ©2024 DemandScience US, LLC All Rights Reserved
             </p>
           </div>
-
-          <div class="flex justify-end w-full">
+ 
+          <div class="flex justify-end w-full sm:text-center">
             <p class="text-right text-white text-sm">
               <a
                 href="https://demandscience.com/privacy-policy-ccpa/"
@@ -280,5 +271,5 @@ const Footer = () => {
     </div>
   );
 };
-
+ 
 export default Footer;
