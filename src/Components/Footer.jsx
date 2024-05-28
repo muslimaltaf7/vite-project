@@ -58,7 +58,7 @@ const Footer = () => {
           <div className="flex items-center lg:w-fit xl:w-fit md:w-full bg-gray-200 border border-gray-300 rounded-full p-2 mt-4">
             <input
               type="email"
-              className="flex-grow bg-transparent outline-none text-black px-4"
+              className="flex-grow bg-transparent outline-none text-black px-4 "
               name="811663_117947pi_811663_117947"
               id="811663_117947pi_811663_117947"
               placeholder="Enter business email"
@@ -67,7 +67,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="btn-redorange px-6 py-2 rounded-full text-white bg-[#CC0047] hover:bg-[#CC0047]"
+              className="btn-redorange px-6 py-2  rounded-full text-white bg-[#CC0047] hover:bg-[#CC0047]"
             >
               Sign Up
             </button>
@@ -112,7 +112,7 @@ const Footer = () => {
       <div className="lg:flex flex-row sm:grid lg:space-x-10 text-lg lg:flex-row md:flex-col sm:flex-col flex-1 xl:justify-around justify-between md:mr-8 text-white">
         <div className="mb-8 md:mb-0">
           <p className="font-sans text-sm font-bold">PRODUCTS</p>
-          <nav className="mt-4 text-sm">
+          <nav className="mt-4">
             <ul className="space-y-2">
               <li>
                 <a
@@ -146,7 +146,7 @@ const Footer = () => {
  
         <div className="mb-8 text-lg md:mb-0 text-white">
           <p className="font-bold text-sm font-sans">OUR DATA</p>
-          <nav className="mt-4 text-sm">
+          <nav className="mt-4">
             <ul className="space-y-2">
               <li>
                 <a href="/data" className="hover:underline">
@@ -181,7 +181,7 @@ const Footer = () => {
       <div className="lg:flex flex-row sm:grid lg:space-x-10 text-lg lg:flex-row md:flex-col sm:flex-col flex-1 xl:justify-around justify-between md:mr-8 text-white">
         <div className="mb-8 md:mb-0">
           <p className="font-bold font-sans text-sm">RESOURCES</p>
-          <nav className="mt-4 text-sm">
+          <nav className="mt-4">
             <ul className="space-y-2">
               <li>
                 <a
@@ -207,7 +207,7 @@ const Footer = () => {
  
         <div className="mb-8 text-lg md:mb-0 text-white">
           <p className="font-bold font-sans text-sm">COMPANY</p>
-          <nav className="mt-4 text-sm">
+          <nav className="mt-4">
             <ul className="space-y-2">
               <li>
                 <a href="https://demandscience.com/about/" className="hover:underline">

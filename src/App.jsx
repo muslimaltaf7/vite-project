@@ -8,7 +8,7 @@ const App = () => {
       
       <Routes>
       <Route path="contentSyndication" element={<ContentSyndication/>} />
-      {/* <Route path="/" element={<Home/>} />
+      {/* <Route path="Home" element={<Home/>} />
         <Route path="contentSyndication" element={<ContentSyndication/>} />
         <Route path="purepush" element={<PurePush/>} />
         <Route path="abmpage" element={<ABM />} />
