@@ -1,8 +1,8 @@
 import React from "react";
 import LottieAnimation from "./LottieAnimation";
 import Cta from "./CTA";
-
-const Hero = ({ heading, subheading, description }) => {
+ 
+const Hero = ({ heading, subheading, description, animationurl, imageUrl }) => {
   return (
     <div className="grid lg:grid-cols-2 md:grid-cols-2 w-full sm:px-36 p-4 font-poppins py-10">
       <div className=" md:text-left flex flex-col gap-4 col-span-1">
@@ -19,12 +19,17 @@ const Hero = ({ heading, subheading, description }) => {
           <Cta title="Get Started" className="" />
         </div>
       </div>
-
-      <div className="">
-        <LottieAnimation imageurl="https://lottie.host/05c80f31-613b-4cf8-8021-a737bf99f1c1/4X2fWr6aBb.json" />
+ 
+      <div className="flex justify-center items-center">
+        {animationurl ? (
+          <LottieAnimation imageurl={animationurl} />
+        ) : (
+          imageUrl && <img src={imageUrl} alt="Illustration" className="w-full h-auto" />
+        )}
       </div>
     </div>
   );
 };
-
+ 
 export default Hero;
+ 

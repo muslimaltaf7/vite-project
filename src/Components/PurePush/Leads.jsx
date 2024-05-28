@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import Lottie from "./Lottie";
 
-const Leads = () => {
+const Leads = ({ Heading1, Heading2, description1, description2 }) => {
   return (
-    <div>     
+    <div>
       <h1 className="text-[#05195F] text-center text-4xl font-semibold font-poppins md py-12">
         Choose the level of leads that fit your goals.
       </h1>
@@ -11,18 +11,18 @@ const Leads = () => {
         <div className="md:text-left order-last xl:order-first flex flex-col gap-4">
           <div>
             <h4 className="text-[#05195F] text-2xl md:text-4xl font-poppins font-bold">
-              <strong>HQL</strong>
+              <strong>{Heading1}</strong>
             </h4>
             <p className="text-[18px] text-[#444444] tracking-wider font-inter leading-relaxed py-5">
-              Accelerate toward your business goals with PurePush Highly Qualified Leads (HQL). Not only are these leads qualified by ICP and intent, they are further verified to have a need and a timeframe that fits with your parameters for a great lead.
+              {description1}
             </p>
           </div>
           <div>
             <h4 className="text-[#05195F] text-2xl md:text-4xl font-poppins font-bold">
-              <strong>HQL+</strong>
+              <strong>{Heading2}</strong>
             </h4>
             <p className="text-[18px] text-[#444444] tracking-wider font-inter leading-relaxed py-5">
-              Get HQL+ when you need to add another layer of qualification to ensure the person you’re talking to is not only showing buying signals, but also has the right budget and authority to do business with you now.
+              {description2}
             </p>
           </div>
         </div>
