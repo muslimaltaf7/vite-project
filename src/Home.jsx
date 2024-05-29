@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import CardsHome from "./CardsHome";
-import Footer from "./Footer";
+// import CardsHome from "./CardsHome";
+import Footer from "./Components/Footer";
 import MQL from "./MQL";
-import LiveDataFactory from "./FactoryFlow";
-import Testimonials from "./Testiomonials";
-import CampaignInfo from "./CampaignInfo";
+import LiveDataFactory from "./LiveDataFactory.jsx";
+import Testimonials from "./Components/Testiomonials";
+// import CampaignInfo from "./CampaignInfo";
 import { FaBars } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { Route } from "react-router-dom";
 
 function Home() {
   const messages = [
@@ -264,44 +263,47 @@ function Home() {
               </div>
             )}
           </nav>
-          <video
-            className="absolute inset-0 w-full h-full object-cover object-top"
-            autoPlay
-            muted
-            loop
-            playsInline
-            src="https://demandscience.com/wp-content/uploads/2023/10/futuristic-background.mp4"
-          ></video>
-          <div className="relative flex flex-col items-center justify-center h-full cursor-pointer bg-black bg-opacity-50">
-            <h1 className="text-center text-white p-0 m-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-semibold">
-              Supercharge Your Pipeline.
-            </h1>
-
-            <div className="mt-8 w-full px-4 sm:px-8 text-center" {...handlers}>
-              <div className="whitespace-nowrap transition-transform duration-500 ease-in-out">
-                <div className="inline-block px-4 py-4">
-                  <p className="text-center text-white text-base sm:text-lg p-0 m-0  md:text-lg lg:text-1xl xl:text-2xl tracking-widest font-inter">
-                    {messages[currentIndex]}
-                  </p>
+          <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]">
+            <video
+              className="absolute inset-0 w-full h-full object-cover object-top"
+              autoPlay
+              muted
+              loop
+              playsInline
+              src="https://demandscience.com/wp-content/uploads/2023/10/futuristic-background.mp4"
+            ></video>
+            <div className="relative flex flex-col items-center justify-center h-full cursor-pointer bg-black bg-opacity-50">
+              <h1 className="text-center text-white p-0 m-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-semibold">
+                Supercharge Your Pipeline.
+              </h1>
+              <div
+                className="mt-8 w-full px-4 sm:px-8 text-center"
+                {...handlers}
+              >
+                <div className="whitespace-nowrap transition-transform duration-500 ease-in-out">
+                  <div className="block px-4 py-4">
+                    <p className="text-center text-white text-base sm:text-lg md:text-xl lg:text-2xl p-0 m-0 tracking-widest font-inter">
+                      {messages[currentIndex]}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-8 py-6 hover:scale-105">
-              <a
-                className="px-6 py-2 sm:px-8 sm:py-3 font-bold text-lg sm:text-xl bg-[#CC0047] text-white rounded-full"
-                href="https://demandscience.com/products/"
-              >
-                Learn More
-              </a>
+              <div className="mt-8 py-6 hover:scale-105 transition-transform duration-300">
+                <a
+                  className="px-6 py-2 sm:px-8 sm:py-3 font-bold text-lg sm:text-xl bg-[#CC0047] text-white rounded-full"
+                  href="https://demandscience.com/products/"
+                >
+                  Learn More
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <CardsHome />
+        {/* <CardsHome /> */}
         <MQL />
         <LiveDataFactory />
         <Testimonials />
-        <CampaignInfo />
+        {/* <CampaignInfo /> */}
         <Footer />
       </div>
     </>

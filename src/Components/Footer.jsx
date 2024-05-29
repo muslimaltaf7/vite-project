@@ -58,7 +58,7 @@ const Footer = () => {
           <div className="flex items-center lg:w-fit xl:w-fit md:w-full bg-gray-200 border border-gray-300 rounded-full p-2 mt-4">
             <input
               type="email"
-              className="flex-grow bg-transparent outline-none text-black px-4"
+              className="flex-grow bg-transparent outline-none text-black px-4 "
               name="811663_117947pi_811663_117947"
               id="811663_117947pi_811663_117947"
               placeholder="Enter business email"
@@ -67,7 +67,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="btn-redorange px-6 py-2 rounded-full text-white bg-[#CC0047] hover:bg-[#CC0047]"
+              className="btn-redorange px-6 py-2  rounded-full text-white bg-[#CC0047] hover:bg-[#CC0047]"
             >
               Sign Up
             </button>
@@ -112,7 +112,7 @@ const Footer = () => {
       <div className="lg:flex flex-row sm:grid lg:space-x-10 text-lg lg:flex-row md:flex-col sm:flex-col flex-1 xl:justify-around justify-between md:mr-8 text-white">
         <div className="mb-8 md:mb-0">
           <p className="font-sans text-sm font-bold">PRODUCTS</p>
-          <nav className="mt-4 text-sm">
+          <nav className="mt-4">
             <ul className="space-y-2">
               <li>
                 <a
@@ -146,7 +146,7 @@ const Footer = () => {
  
         <div className="mb-8 text-lg md:mb-0 text-white">
           <p className="font-bold text-sm font-sans">OUR DATA</p>
-          <nav className="mt-4 text-sm">
+          <nav className="mt-4">
             <ul className="space-y-2">
               <li>
                 <a href="/data" className="hover:underline">
@@ -181,7 +181,7 @@ const Footer = () => {
       <div className="lg:flex flex-row sm:grid lg:space-x-10 text-lg lg:flex-row md:flex-col sm:flex-col flex-1 xl:justify-around justify-between md:mr-8 text-white">
         <div className="mb-8 md:mb-0">
           <p className="font-bold font-sans text-sm">RESOURCES</p>
-          <nav className="mt-4 text-sm">
+          <nav className="mt-4">
             <ul className="space-y-2">
               <li>
                 <a
@@ -207,7 +207,7 @@ const Footer = () => {
  
         <div className="mb-8 text-lg md:mb-0 text-white">
           <p className="font-bold font-sans text-sm">COMPANY</p>
-          <nav className="mt-4 text-sm">
+          <nav className="mt-4">
             <ul className="space-y-2">
               <li>
                 <a href="https://demandscience.com/about/" className="hover:underline">
@@ -235,15 +235,15 @@ const Footer = () => {
       </div>
       <div className="w-full">
           <hr className="border-5 border-gray-200" />
-        <div class="flex w-full flex-col sm:flex-row justify-between sm:justify-center items-center py-10">
-          <div class="flex justify-start w-full">
-            <p class="text-white text-sm text-center">
+        <div class="flex w-full flex-col md:flex-col lg:flex-row xl:flex-row sm:space-y-5 md:space-y-5 sm:flex-col lg:space-y-0 py-10">
+          <div class="flex sm:justify-center xl:justify-start w-full">
+            <p class="text-white text-sm">
               ©2024 DemandScience US, LLC All Rights Reserved
             </p>
           </div>
  
-          <div class="flex justify-end w-full sm:text-center">
-            <p class="text-right text-white text-sm">
+          <div class="flex sm:justify-center xl:justify-end w-full">
+            <p class="text-white text-sm">
               <a
                 href="https://demandscience.com/privacy-policy-ccpa/"
                 class="hover:underline"

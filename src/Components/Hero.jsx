@@ -1,7 +1,7 @@
 import React from "react";
 import LottieAnimation from "./LottieAnimation";
 import Cta from "./CTA";
- 
+
 const Hero = ({ heading, subheading, description, animationurl, imageUrl }) => {
   return (
     <div className="grid lg:grid-cols-2 md:grid-cols-2 w-full sm:px-36 p-4 font-poppins py-10">
@@ -19,8 +19,8 @@ const Hero = ({ heading, subheading, description, animationurl, imageUrl }) => {
           <Cta title="Get Started" className="" />
         </div>
       </div>
- 
-      <div className="flex justify-center items-center">
+
+      <div className="flex justify-center  pt-8 items-center">
         {animationurl ? (
           <LottieAnimation imageurl={animationurl} />
         ) : (
