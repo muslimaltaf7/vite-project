@@ -113,7 +113,7 @@ function Home() {
                 Supercharge Your Pipeline.
               </h1>
               <div
-                className="mt-8 w-full px-4 sm:px-8 text-center"
+                className="mt-8 w-full text-wrap px-4 sm:px-8 text-center"
                 {...handlers}
               >
                 <div className="whitespace-nowrap transition-transform duration-500 ease-in-out overflow-hidden">
