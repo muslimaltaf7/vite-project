@@ -1,5 +1,6 @@
+
 import React, { useState } from "react";
-import dropdownIcon from "../assets/icons8-dropdown-50.png";
+import dropdownIcon from "../assets/icons8-dropdown-50.png"
 import { FaBars } from "react-icons/fa";
 
 const NavBar = () => {
@@ -66,7 +67,7 @@ const NavBar = () => {
             className="relative ml-4"
           >
             <button
-              onMouseOver={() => toggleDropdown("products")}
+              onClick={() => toggleDropdown("products")}
               className="text-lg focus:outline-none flex items-center font-medium"
             >
               Products{" "}
@@ -115,7 +116,7 @@ const NavBar = () => {
             className="relative ml-4"
           >
             <button
-              onMouseOver={() => toggleDropdown("ourData")}
+              onClick={() => toggleDropdown("ourData")}
               className="text-lg focus:outline-none flex items-center font-medium"
             >
               Our Data{" "}
@@ -272,9 +273,11 @@ const NavBar = () => {
           >
             About Us
           </a>
+          <div className="pb-4">
           <button className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mt-4 mx-4 w-[calc(100%-2rem)]">
             Let's Talk
           </button>
+          </div>
         </div>
       )}
     </nav>
