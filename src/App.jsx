@@ -9,6 +9,7 @@ const App = () => {
     <div>
       
       <Routes>
+      /* <Route path="/" element={<Abm/>} />
       <Route path="contentSyndication" element={<ContentSyndication/>} />
       <Route path="purepush" element={<PurePush/>} />
       <Route path="abmpage" element={<Abm />} />

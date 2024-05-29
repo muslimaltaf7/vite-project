@@ -20,7 +20,7 @@ const Hero = ({ heading, subheading, description, animationurl, imageUrl }) => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center  pt-8 items-center">
         {animationurl ? (
           <LottieAnimation imageurl={animationurl} />
         ) : (

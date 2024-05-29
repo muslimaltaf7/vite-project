@@ -11,32 +11,32 @@ import AnimatedTool from "./Components/AnimatedTool";
 import Footer from "./Components/Footer"
 import ABMTitle from "./Components/AbmComponents/ABMTitle";
 import ABMStrategy from "./Components/AbmComponents/ABMStrategy";
+import Title from "./Components/AbmComponents/Title";
 
 const Abm = () => {
   const cardData = [
     {
-      title: "Accurate ICP",
+      title: "Prioritize accounts",
       imageSrc:
-        "https://demandscience.com/wp-content/uploads/2023/03/accurate-icp-1.png",
-      altText: "Accurate ICP",
-      subtitle: "Reach your target audience with four layers of intent data.",
+        "https://demandscience.com/wp-content/uploads/2023/02/prioritize-accounts1-1.svg",
+      altText: "Prioritize accounts",
+      subtitle: "Identify and target your best accounts with intent data and Confirmed Connect™ .",
       titleColor: "#05195F",
     },
     {
-      title: "Increased ROI",
+      title: "Expand your reach",
       imageSrc:
-        "https://demandscience.com/wp-content/uploads/2023/02/increased-roi-1.png",
-      altText: "Increased ROI",
-      subtitle: "Get up to 12x ROI compared to the competition.",
+        "https://demandscience.com/wp-content/uploads/2023/02/expand-your-reach1-1.svg",
+      altText: "Expand your reach",
+      subtitle: "Serve your ads to your ideal prospects with our identity-based approach.",
       titleColor: "#05195F",
     },
     {
-      title: "Guaranteed CPL",
+      title: "Close deals faster",
       imageSrc:
-        "https://demandscience.com/wp-content/uploads/2023/02/guaranteed-cpl-1-1.png",
-      altText: "Guaranteed CPL",
-      subtitle:
-        "Know your cost per lead ahead of time so you can maximize your budget.",
+        "https://demandscience.com/wp-content/uploads/2023/02/earn-big-roi1-1.svg",
+      altText: "Close deals faster",
+      subtitle:"Accelerate consideration and boost brand visibility between sales touchpoints.",
       titleColor: "#05195F",
       span: "md:col-span-2 lg:col-span-1",
     },
@@ -54,20 +54,16 @@ const Abm = () => {
         "All ad campaigns are served on our brand-safe advertising platform. We have access to all major inventory sources across multiple exchanges including; Google Exchange, Rubicon, PubMatic, Open X, Xandr, and 33across. This allows us to deliver across thousands of content sites such as Business Insider, Forbes, Digital Trends, Wired, Washington Post, Yahoo News, Fox News, CNN.com, Weather.com, and so many more. While we seek to deliver ads on B2B content sites, we do not only serve on B2B sites. Our focus is on finding the buying committee where they choose to be online and delivering impressions at the account level, so you can measure your ad campaign’s influence in driving engagement across the account.",
     },
     {
-      title: "What makes your content syndication campaigns unique?",
+      title: "How is DemandScience ABM Display different from competitors?",
       content:
-        "All of our syndication campaigns are built on the foundation of our intent engine, and powered by the Live Data Factory. This not only gives you access to the most accurate contact records, but helps us use intent data to serve your campaigns to the highest-quality leads possible.",
+        "Our ABM ad campaigns leverage our unique data sets. The current platform you work with may not have their own first-party audience or their own intent data. ",
     },
     {
-      title: "How does intent data impact a campaign?",
+      title: "Why use display from ABM?",
       content:
-        "Using our intent engine, we can identify companies and buyers already showing interest across various topics. This enables us to serve the right content, to the right buyers, at the right time, helping to generate the highest quality leads possible.",
+        "Display advertising is a useful supplement to your account-based marketing program, enabling you to target meaningful offers to decision makers and influencers at your ideal organizations. ",
     },
-    {
-      title: "What are the value props of Content Syndication?",
-      content:
-        "Content Syndication is one of the most effective ways to grow your opted-in database. Its specialty is feeding the top of the funnel with high-quality leads ready for further nurture. We guarantee your CPL and number of leads upfront, and have a lead replacement policy if they fail to meet your ICP.",
-    },
+   
   ];
 
   const image1 = "/images/all-the-support-you-need.svg";
@@ -89,7 +85,7 @@ const Abm = () => {
           className="text-[36px] font-semibold  text-center font-poppins"
           style={{ color: "#05195F" }}
         >
-          Campaigns that fill the entire funnel.
+          {/* Campaigns that fill the entire funnel. */}
         </h1>
       </div>
       <div className="w-full flex flex-col justify-center items-center bg-white rounded-lg p-2 sm:p-4">
@@ -111,10 +107,10 @@ const Abm = () => {
         </div>
       </div>
       <div className="pt-[80px]">
-      <ABMTitle />
+      <Title />
       </div>
-      <Carousel />
-      <div className="py-12">
+      
+      <div className="py-2 bg-gray-100">
         <Intro
           title="We’ve got your back every step of  the way."
           description="Your dedicated Customer Experience Manager keeps open lines of communication for every campaign. That’s way more support than you’ll get from other high-intent lead vendors."
@@ -123,19 +119,8 @@ const Abm = () => {
       </div>
       <ABMStrategy />
       <Accordion heading="ABM Display FAQ" items={accordionItems} />
-      <div className="w-full sm:px-36 p-4" >
-        <Tool
-          title="Capture qualified leads that keep on coming."
-          description="Our Quickstart Guide explains the benefits of using content syndication and how to choose the right partner (wink-wink)."
-          image={image2}
-        />
-      </div>
-      <div className="w-full sm:px-36 p-4">
-        <AnimatedTool
-          title="Let’s do the math on content syndication ROI."
-          description="Use our online calculator to explore the ROI potential of syndicating your content."
-        />
-      </div>
+     
+     
       <Footer />
     </>
   );
