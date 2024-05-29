@@ -5,7 +5,7 @@ import MQL from "./MQL";
 import LiveDataFactory from "./LiveDataFactory.jsx";
 import Testimonials from "./Components/Testiomonials";
 import Card from "./Components/card.jsx";
-import HomeNav from "./HomeNav.jsx";
+import HomeNav from "./Components/HomeNav.jsx";
 import ABMStrategy from "./Components/AbmComponents/ABMStrategy.jsx";
 import Cta from "./Components/CTA.jsx";
 

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import dropdownIcon from "../assets/icons8-dropdown-50.png";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+
 import { FaBars } from "react-icons/fa";
 
-const NavBar = () => {
+const HomeNav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -30,7 +31,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`p-4 z-20 sticky top-0 w-full bg-white mt-3 transition-transform duration-300 ${
+      className={`p-4 z-20 absolute top-0 w-full bg-transparent text-white mt-3 transition-transform duration-300 ${
         isNavVisible ? "transform translate-y-0" : "transform -translate-y-full"
       }`}
     >
@@ -44,22 +45,17 @@ const NavBar = () => {
           </a>
         </div>
         <div className="lg:flex hidden justify-center flex-grow gap-6">
-          <div className="relative ml-4 group">
+          {/* <div className="relative ml-4 group">
             <a
               href="/"
               className="text-lg focus:outline-none flex items-center font-medium"
             >
               Home
             </a>
-          </div>
+          </div> */}
           <div className="relative ml-4 group">
             <button className="text-lg focus:outline-none flex items-center font-medium">
-              Products{" "}
-              <img
-                src={dropdownIcon}
-                alt="dropdown icon"
-                className="ml-1 h-4 w-4"
-              />
+              Products <MdOutlineKeyboardArrowDown />
             </button>
             <div className="absolute top-4 bg-white mt-2 py-2 w-48 rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
               <a
@@ -90,12 +86,7 @@ const NavBar = () => {
           </div>
           <div className="relative ml-4 group">
             <button className="text-lg focus:outline-none flex items-center font-medium">
-              Our Data{" "}
-              <img
-                src={dropdownIcon}
-                alt="dropdown icon"
-                className="ml-1 h-4 w-4"
-              />
+              Our Data <MdOutlineKeyboardArrowDown />
             </button>
             <div className="absolute top-4 bg-white mt-2 py-2 w-48 rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
               <a
@@ -139,7 +130,7 @@ const NavBar = () => {
         />
       </div>
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white shadow-lg mt-2 rounded-lg">
+        <div className="lg:hidden bg-white text-black shadow-lg mt-2 rounded-lg">
           <a
             href="/"
             className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
@@ -148,12 +139,7 @@ const NavBar = () => {
           </a>
           <div className="relative group">
             <button className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4 py-2">
-              Products{" "}
-              <img
-                src={dropdownIcon}
-                alt="dropdown icon"
-                className="ml-1 h-4 w-4"
-              />
+              Products <MdOutlineKeyboardArrowDown />
             </button>
             <div className="bg-white py-2 w-full rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
               <a
@@ -184,12 +170,7 @@ const NavBar = () => {
           </div>
           <div className="relative group">
             <button className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4">
-              Our Data{" "}
-              <img
-                src={dropdownIcon}
-                alt="dropdown icon"
-                className="ml-1 h-4 w-4"
-              />
+              Our Data <MdOutlineKeyboardArrowDown />
             </button>
             <div className="bg-white w-full absolute rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
               <a
@@ -225,8 +206,8 @@ const NavBar = () => {
             About Us
           </a>
           <div className="pb-4">
-            <button className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mt-4 mx-2 w-[calc(100%-2rem)]">
-              Let's Talk
+            <button className="bg-[#CC0047] text-white text-lg rounded-full focus:outline-none  w-[calc(100%-2rem)]">
+              <p className="block w-full h-full">Let's Talk</p>
             </button>
           </div>
         </div>
@@ -235,5 +216,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
-
+export default HomeNav;

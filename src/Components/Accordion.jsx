@@ -36,7 +36,7 @@ const AccordionItem = ({ title, content }) => {
     <>
       <div className="border-t border-[#ACACAC]">
         <button
-          className="flex justify-between gap-2 items-center w-full py-4 px-1 text-left text-[14px] text-wrap text-[#444444] focus:outline-none"
+          className="flex justify-between gap-2 items-center w-full py-4 px-1 text-left xltext-[14px] text-wrap text-[#444444] focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className={`isOpen ? "font-semibold" : "" flex-1`}>{title}</div>
