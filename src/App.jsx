@@ -9,11 +9,11 @@ const App = () => {
       
       <Routes>
       <Route path="contentSyndication" element={<ContentSyndication/>} />
+       <Route path="/" element={<Home/>} />
       <Route path="purepush" element={<PurePush/>} />
-      {/* <Route path="/" element={<Home/>} />
-        <Route path="contentSyndication" element={<ContentSyndication/>} />
+        {/* <Route path="contentSyndication" element={<ContentSyndication/>} />
         <Route path="abmpage" element={<ABM />} />
-        <Route path="contact" element={<LetsTalk />} /> */}
+        <Route path="contact" element={<LetsTalk />} />  */} 
       </Routes>
      
     </div>
