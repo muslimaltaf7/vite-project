@@ -4,7 +4,7 @@ import Cta from "./CTA";
 
 const Hero = ({ heading, subheading, description, animationurl, imageUrl }) => {
   return (
-    <div className="grid lg:grid-cols-2 md:grid-cols-2 w-full sm:px-36 p-4 font-poppins py-10">
+    <div className="grid lg:grid-cols-2 md:grid-cols-2 w-full sm:px-48 2xl:px-76 px-4 font-poppins py-10">
       <div className=" md:text-left flex flex-col gap-4 col-span-1">
         <h4 className="text-[#0066FC] text-2xl md:text-2xl font-poppins ">
           <strong>{heading}</strong>

@@ -4,6 +4,7 @@ import PurePush from './PurePush';
 import Abm from './Abm';
 import { Routes, Route } from "react-router-dom";
 import Home from './Home';
+import LetsTalk from './Lets Talk/LetsTalk'
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
         <Route path="contentSyndication" element={<ContentSyndication/>} />
         <Route path="purepush" element={<PurePush/>} />
         <Route path="abmpage" element={<Abm />} />
-        {/* <Route path="/" element={<Home/>} />
+        <Route path="contact" element={<LetsTalk />}/>
+        {/* <Route path="/" element={<Home/>} />}
           <Route path="contentSyndication" element={<ContentSyndication/>} />
           <Route path="abmpage" element={<ABM />} />
           <Route path="contact" element={<LetsTalk />} /> */}

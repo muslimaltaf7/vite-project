@@ -12,7 +12,7 @@ const Accordion = ({ heading, items }) => {
               paddingBottom: "var(--wp--preset--spacing--70)",
             }}
           >
-            <h2 className="text-center text-3xl font-semibold text-[34px] text-[#05195F] my-8 font-poppins tracking-wide">
+            <h2 className="text-center text-3xl font-semibold  text-[#05195F] my-8 font-poppins tracking-wide">
               {heading}
             </h2>
             {items.map((item, index) => (
@@ -36,17 +36,17 @@ const AccordionItem = ({ title, content }) => {
     <>
       <div className="border-t border-[#ACACAC]">
         <button
-          className="flex justify-between items-center w-full py-4 px-4 text-left text-[21px] text-[#444444] focus:outline-none"
+          className="flex justify-between gap-2 items-center w-full py-4 px-1 text-left text-[14px] text-wrap text-[#444444] focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className={isOpen ? "font-semibold" : ""}>{title}</span>
-          <span className="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-[#05195F]">
+          <div className={`isOpen ? "font-semibold" : "" flex-1`}>{title}</div>
+          <div className="flex items-center justify-center w-[25px] h-[25px] rounded-full bg-[#05195F]">
             <i
               className={`text-xs text-white fa ${
                 isOpen ? "fa-minus" : "fa-plus"
               }`}
             ></i>
-          </span>
+          </div>
         </button>
         <div
           className={`overflow-hidden transition-all duration-300 text-[18px] tracking-wider ${

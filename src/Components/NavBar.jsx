@@ -1,6 +1,5 @@
-
-import React, { useState } from "react";
-import dropdownIcon from "../assets/icons8-dropdown-50.png"
+import React, { useState, useEffect } from "react";
+import dropdownIcon from "../assets/icons8-dropdown-50.png";
 import { FaBars } from "react-icons/fa";
 
 const NavBar = () => {
@@ -11,6 +10,8 @@ const NavBar = () => {
     aboutUs: false,
   });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isNavVisible, setIsNavVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   let closeTimeout;
 
@@ -37,9 +38,30 @@ const NavBar = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
   };
 
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY) {
+      setIsNavVisible(false);
+    } else {
+      setIsNavVisible(true);
+    }
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <nav className="p-4 z-20 sticky mt-3">
-      <div className="container px-12 mx-auto flex justify-between gap-4 items-center">
+    <nav
+      className={`p-4 z-20 sticky top-0 w-full bg-white mt-3 transition-transform duration-300 ${
+        isNavVisible ? "transform translate-y-0" : "transform -translate-y-full"
+      }`}
+    >
+      <div className="sm:px-12 mx-auto flex justify-between gap-4 items-center">
         <div className="text-white text-2xl flex-1">
           <a href="/">
             <img
@@ -274,9 +296,9 @@ const NavBar = () => {
             About Us
           </a>
           <div className="pb-4">
-          <button className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mt-4 mx-4 w-[calc(100%-2rem)]">
-            Let's Talk
-          </button>
+            <button className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mt-4 mx-2 w-[calc(100%-2rem)]">
+              Let&apos;s Talk
+            </button>
           </div>
         </div>
       )}

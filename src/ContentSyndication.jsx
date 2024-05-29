@@ -87,8 +87,8 @@ const ContentSyndication = () => {
           Campaigns that fill the entire funnel.
         </h1>
       </div>
-      <div className="w-full flex flex-col justify-center items-center bg-white rounded-lg p-2 sm:p-4">
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="w-full flex flex-col sm:px-48 justify-center items-center bg-white rounded-lg p-2 sm:p-4">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {cardData.map((card, index) => (
             <div
               key={index}

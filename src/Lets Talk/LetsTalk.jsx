@@ -1,9 +1,9 @@
 import React from 'react'
 import Contact from './Contact'
-import NavBar from '../NavBar'
+import NavBar from '../Components/NavBar'
 import OfficeLocations from './address'
 import TrustedCompanies from './TrustedCompanies'
-import Footer from '../Footer'
+import Footer from '../Components/Footer'
 
 const LetsTalk = () => {
   return (

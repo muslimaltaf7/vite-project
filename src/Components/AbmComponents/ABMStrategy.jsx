@@ -1,17 +1,15 @@
-
-
 import React from "react";
-
-function ABMStrategy() {
+ 
+const ABMStrategy = ({ heading, ButtonComponent }) => {
   return (
-    <div className="flex flex-col space-y-0">
+    <div className="flex flex-col space-y-0 px-4">
       <div className="text-center">
         <h2 className="text-2xl md:text-4xl font-bold text-center pt-40 text-[#05195F]">
-          How does first-party data make or break your ABM <br /> strategy?
+          {heading}
         </h2>
       </div>
       <div className="relative w-full flex justify-center items-center mb-2">
-        <div className="relative w-full max-w-screen-lg px-4">
+        <div className="relative w-full max-w-screen-lg">
           <svg
             viewBox="0 0 800 600"
             xmlns="http://www.w3.org/2000/svg"
@@ -50,8 +48,11 @@ function ABMStrategy() {
           </svg>
         </div>
       </div>
+      <div className="flex justify-center mt-8">
+        {ButtonComponent && <ButtonComponent />}
+      </div>
     </div>
   );
-}
-
+};
+ 
 export default ABMStrategy;
