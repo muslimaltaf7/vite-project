@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-
 import { FaBars } from "react-icons/fa";
 
 const HomeNav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
@@ -18,6 +18,11 @@ const HomeNav = () => {
       setIsNavVisible(false);
     } else {
       setIsNavVisible(true);
+    }
+    if (currentScrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
     }
     setLastScrollY(currentScrollY);
   };
@@ -31,33 +36,26 @@ const HomeNav = () => {
 
   return (
     <nav
-      className={`p-4 z-20 absolute top-0 w-full bg-transparent text-white mt-3 transition-transform duration-300 ${
+      className={`p-4 z-20 fixed top-0 w-full transition-transform duration-300 ${
         isNavVisible ? "transform translate-y-0" : "transform -translate-y-full"
-      }`}
+      } ${isScrolled ? "bg-white shadow-md text-black" : "bg-transparent text-white"}`}
     >
       <div className="sm:px-12 mx-auto flex justify-between gap-4 items-center">
-        <div className="text-white text-2xl flex-1">
+        <div className="text-2xl flex-1">
           <a href="/">
             <img
               src="https://demandscience.com/wp-content/uploads/2023/02/demand-science-logo-2.svg"
               alt="Demand Science Logo"
+              className={`${isScrolled ? "filter invert-0" : "filter invert"}`}
             />
           </a>
         </div>
         <div className="lg:flex hidden justify-center flex-grow gap-6">
-          {/* <div className="relative ml-4 group">
-            <a
-              href="/"
-              className="text-lg focus:outline-none flex items-center font-medium"
-            >
-              Home
-            </a>
-          </div> */}
           <div className="relative ml-4 group">
             <button className="text-lg focus:outline-none flex items-center font-medium">
               Products <MdOutlineKeyboardArrowDown />
             </button>
-            <div className="absolute top-4 bg-white mt-2 py-2 w-48 rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
+            <div className="absolute top-5 bg-white mt-2 py-2 w-48 rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
               <a
                 href="/contentsyndication"
                 className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
@@ -88,7 +86,7 @@ const HomeNav = () => {
             <button className="text-lg focus:outline-none flex items-center font-medium">
               Our Data <MdOutlineKeyboardArrowDown />
             </button>
-            <div className="absolute top-4 bg-white mt-2 py-2 w-48 rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
+            <div className="absolute top-5 bg-white mt-2 py-2 w-48 rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
               <a
                 href="#"
                 className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
@@ -137,7 +135,6 @@ const HomeNav = () => {
           >
             Home
           </a>
-          
           <div className="relative group">
             <button className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4 py-2">
               Products <MdOutlineKeyboardArrowDown />

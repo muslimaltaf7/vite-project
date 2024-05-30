@@ -6,6 +6,7 @@ const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [hasShadow, setHasShadow] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
@@ -18,6 +19,7 @@ const NavBar = () => {
     } else {
       setIsNavVisible(true);
     }
+    setHasShadow(currentScrollY > 0);
     setLastScrollY(currentScrollY);
   };
 
@@ -32,7 +34,7 @@ const NavBar = () => {
     <nav
       className={`p-4 z-20 sticky top-0 w-full bg-white mt-3 transition-transform duration-300 ${
         isNavVisible ? "transform translate-y-0" : "transform -translate-y-full"
-      }`}
+      } ${hasShadow ? "shadow-lg" : ""}`}
     >
       <div className="sm:px-12 mx-auto flex justify-between gap-4 items-center">
         <div className="text-white text-2xl flex-1">
@@ -236,4 +238,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
