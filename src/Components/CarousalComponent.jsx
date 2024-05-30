@@ -54,7 +54,7 @@ const CarouselComponent = ({
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
     appendDots: (dots) => (
-      <div className="custom-dots">
+      <div className=" carousel-container custom-dots">
         <ul className="flex justify-center space-x-2">{dots}</ul>
       </div>
     ),

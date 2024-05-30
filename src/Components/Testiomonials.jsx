@@ -17,7 +17,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-6 justify-items-center py-12 sm:w-[70%] mx-2 sm:mx-auto">
+    <div className="testimonial-container grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-6 justify-items-center py-12 sm:w-[70%] mx-2 sm:mx-auto">
       <div className="flex flex-col items-center px-8 md:items-start gap-4 w-full">
         <div className="grid grid-cols-3 justify-center items-center mb-6  gap-4">
           <img
