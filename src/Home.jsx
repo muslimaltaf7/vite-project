@@ -5,7 +5,7 @@ import MQL from "./MQL";
 import LiveDataFactory from "./LiveDataFactory.jsx";
 import Testimonials from "./Components/Testiomonials";
 import Card from "./Components/card.jsx";
-import HomeNav from "./HomeNav.jsx";
+import HomeNav from "./Components/HomeNav.jsx";
 import ABMStrategy from "./Components/AbmComponents/ABMStrategy.jsx";
 import Cta from "./Components/CTA.jsx";
 
@@ -113,7 +113,7 @@ function Home() {
                 Supercharge Your Pipeline.
               </h1>
               <div
-                className="mt-8 w-full px-4 sm:px-8 text-center"
+                className="mt-8 w-full text-wrap px-4 sm:px-8 text-center"
                 {...handlers}
               >
                 <div className="whitespace-nowrap transition-transform duration-500 ease-in-out overflow-hidden">

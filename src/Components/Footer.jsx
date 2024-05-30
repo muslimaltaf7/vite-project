@@ -55,10 +55,10 @@ const Footer = () => {
             id="811663_117965pi_811663_117965"
             value=""
           />
-          <div className="flex items-center lg:w-fit xl:w-fit md:w-full bg-gray-200 border border-gray-300 rounded-full p-2 mt-4">
+          <div className="flex items-center flex-col gap-4 sm:flex-row lg:w-fit xl:w-fit md:w-full bg-gray-200 border border-gray-300 sm:rounded-full rounded-md  p-2 mt-4">
             <input
               type="email"
-              className="flex-grow bg-transparent outline-none text-black px-4 "
+              className="flex-grow bg-transparent outline-none text-black px-4 w-full "
               name="811663_117947pi_811663_117947"
               id="811663_117947pi_811663_117947"
               placeholder="Enter business email"
@@ -67,7 +67,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="btn-redorange px-6 py-2  rounded-full text-white bg-[#CC0047] hover:bg-[#CC0047]"
+              className="btn-redorange px-6 py-2 w-full  rounded-full text-white bg-[#CC0047] hover:bg-[#CC0047]"
             >
               Sign Up
             </button>
