@@ -16,7 +16,7 @@ const Card = ({ title, imageSrc, altText, subtitle, titleColor,Buttontext, Icon 
         <p className="text-gray-500 text-lg font-inter">
           {subtitle}
         </p>
-        <button className='text-[#F40356] font-bold flex w-full gap-1 justify-center items-end py-4'>{Buttontext} {Icon}</button>
+        <button className='text-[#F40356] font-bold flex w-full gap-1 justify-center text-xl items-end py-4'>{Buttontext} {Icon}</button>
       </div>
     </div>
   );

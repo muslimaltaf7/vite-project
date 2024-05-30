@@ -137,6 +137,7 @@ const HomeNav = () => {
           >
             Home
           </a>
+          
           <div className="relative group">
             <button className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4 py-2">
               Products <MdOutlineKeyboardArrowDown />

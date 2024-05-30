@@ -8,6 +8,7 @@ import Card from "./Components/card.jsx";
 import HomeNav from "./Components/HomeNav.jsx";
 import ABMStrategy from "./Components/AbmComponents/ABMStrategy.jsx";
 import Cta from "./Components/CTA.jsx";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const cardData = [
   {
@@ -17,7 +18,7 @@ const cardData = [
     subtitle: "Use the content you have to get the leads that you want.",
     titleColor: "#05195F",
     Buttontext: "See How",
-    Icon: "",
+    Icon: <MdOutlineKeyboardArrowRight/>,
   },
   {
     title: "PurePush",
@@ -26,7 +27,7 @@ const cardData = [
     subtitle: "Connect with highly-qualified leads who are closer to purchase.",
     titleColor: "#05195F",
     Buttontext: "See How",
-    Icon: "",
+    Icon: <MdOutlineKeyboardArrowRight/>,
   },
   {
     title: "ABM Display",
@@ -35,7 +36,7 @@ const cardData = [
     subtitle: "Get the right ads to in-market buyers at your dream accounts..",
     titleColor: "#05195F",
     Buttontext: "See How",
-    Icon: "",
+    Icon: <MdOutlineKeyboardArrowRight/>,
   },
   {
     title: "Account Intelligence",
@@ -44,7 +45,7 @@ const cardData = [
     subtitle: "Transform your marketing with precision insights and targeting.",
     titleColor: "#05195F",
     Buttontext: "See How",
-    Icon: "",
+    Icon: <MdOutlineKeyboardArrowRight/>,
   },
 ];
 
@@ -183,5 +184,4 @@ function Home() {
     </>
   );
 }
-
 export default Home;
