@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import dropdownIcon from "../assets/icons8-dropdown-50.png";
 import { FaBars } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,6 +30,8 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+
+  const navigate = useNavigate();
 
   return (
     <nav
@@ -227,7 +230,10 @@ const NavBar = () => {
             About Us
           </a>
           <div className="pb-4">
-            <button className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mt-4 mx-2 w-[calc(100%-2rem)]">
+            <button
+              onClick={() => navigate("/contact")}
+              className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mt-4 mx-2 w-[calc(100%-2rem)]"
+            >
               Let's Talk
             </button>
           </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { FaBars } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const HomeNav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,6 +34,8 @@ const HomeNav = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+
+  const navigate = useNavigate()
 
   return (
     <nav
@@ -204,8 +207,11 @@ const HomeNav = () => {
             About Us
           </a>
           <div className="pb-4">
-            <button className="bg-[#CC0047] text-white text-lg rounded-full focus:outline-none  w-[calc(100%-2rem)]">
-              <p className="block w-full h-full">Let's Talk</p>
+            <button
+              onClick={() => navigate("/contact")}
+              className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mt-4 mx-2 w-[calc(100%-2rem)]"
+            >
+              Let's Talk
             </button>
           </div>
         </div>
