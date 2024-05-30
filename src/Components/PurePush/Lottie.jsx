@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Lottie from 'react-lottie';
+import React, { useState, useEffect } from "react";
+import Lottie from "react-lottie";
 
 const LottieComponent = () => {
   const [animationData, setAnimationData] = useState(null);
@@ -7,11 +7,13 @@ const LottieComponent = () => {
   useEffect(() => {
     const fetchAnimationData = async () => {
       try {
-        const response = await fetch('https://lottie.host/d96b1b6f-92f3-4c4c-ab26-dd9b9a0e2c60/E7s0lDeKl6.json');
+        const response = await fetch(
+          "https://lottie.host/d96b1b6f-92f3-4c4c-ab26-dd9b9a0e2c60/E7s0lDeKl6.json"
+        );
         const data = await response.json();
         setAnimationData(data);
       } catch (error) {
-        console.error('Error fetching animation data:', error);
+        console.error("Error fetching animation data:", error);
       }
     };
 
@@ -19,28 +21,29 @@ const LottieComponent = () => {
   }, []);
 
   useEffect(() => {
-
     if (animationData) {
-      const waitForLoittieInteractive = setInterval(() => {
-        let lottiePlayer = document.getElementById('kb-lottie-player26533_fa5bd2-75');
-        if (typeof LottieInteractivity !== 'undefined') {
-          lottiePlayer.addEventListener('ready', () => {
+      const waitForLottieInteractive = setInterval(() => {
+        let lottiePlayer = document.getElementById(
+          "kb-lottie-player26533_fa5bd2-75"
+        );
+        if (typeof LottieInteractivity !== "undefined") {
+          lottiePlayer.addEventListener("ready", () => {
             LottieInteractivity.create({
               player: lottiePlayer.getLottie(),
-              mode: 'scroll',
+              mode: "scroll",
               actions: [
                 {
                   visibility: [0, 1.0],
-                  type: 'play',
+                  type: "play",
                 },
               ],
             });
           });
-          clearInterval(waitForLoittieInteractive);
+          clearInterval(waitForLottieInteractive);
         }
       }, 125);
 
-      return () => clearInterval(waitForLoittieInteractive);
+      return () => clearInterval(waitForLottieInteractive);
     }
   }, [animationData]);
 
@@ -49,18 +52,14 @@ const LottieComponent = () => {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
   return (
     <div>
       {animationData ? (
-        
-        <Lottie
-          options={defaultOptions}
-          style={{ width: '55%', height: '60%' }}
-        />
+        <Lottie options={defaultOptions} height="60%" width="55%" />
       ) : (
         <p>Loading animation...</p>
       )}

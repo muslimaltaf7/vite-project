@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import Footer from "./Components/Footer";
-import MQL from "./MQL";
-import LiveDataFactory from "./LiveDataFactory.jsx";
-import Testimonials from "./Components/Testiomonials";
+import MQL from "./Components/Home/MQL.jsx";
+import LiveDataFactory from "./Components/Home/LiveDataFactory.jsx";
+import Testimonials from "./Components/Home/Testiomonials.jsx";
 import Card from "./Components/card.jsx";
-import HomeNav from "./Components/HomeNav.jsx";
+import HomeNav from "./Components/Home/HomeNav.jsx";
 import ABMStrategy from "./Components/AbmComponents/ABMStrategy.jsx";
 import Cta from "./Components/CTA.jsx";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";

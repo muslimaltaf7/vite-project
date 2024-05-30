@@ -236,32 +236,32 @@ const Footer = () => {
       
       <div className="w-full">
           <hr className="border-5 border-gray-200" />
-        <div class="flex w-full flex-col md:flex-col lg:flex-row xl:flex-row sm:space-y-5 md:space-y-5 sm:flex-col lg:space-y-0 py-10">
-          <div class="flex sm:justify-center xl:justify-start w-full">
-            <p class="text-white text-sm">
+        <div className="flex w-full flex-col md:flex-col lg:flex-row xl:flex-row sm:space-y-5 md:space-y-5 sm:flex-col lg:space-y-0 py-10">
+          <div className="flex sm:justify-center xl:justify-start w-full">
+            <p className="text-white text-sm">
               ©2024 DemandScience US, LLC All Rights Reserved
             </p>
           </div>
  
-          <div class="flex sm:justify-center xl:justify-end w-full">
-            <p class="text-white text-sm">
+          <div className="flex sm:justify-center xl:justify-end w-full">
+            <p className="text-white text-sm">
               <a
                 href="https://demandscience.com/privacy-policy-ccpa/"
-                class="hover:underline"
+                className="hover:underline"
               >
                 Do Not Sell My Information
               </a>{" "}
               |
               <a
                 href="https://demandscience.com/privacy-policy/"
-                class="hover:underline"
+                className="hover:underline"
               >
                 Privacy Policy
               </a>{" "}
               |
               <a
                 href="https://demandscience.com/terms-of-use/"
-                class="hover:underline"
+                className="hover:underline"
               >
                 Terms & Conditions
               </a>

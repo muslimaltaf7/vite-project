@@ -46,7 +46,7 @@ const HomeNav = () => {
             <img
               src="https://demandscience.com/wp-content/uploads/2023/02/demand-science-logo-2.svg"
               alt="Demand Science Logo"
-              className={`${isScrolled ? "filter invert-0" : "filter invert"}`}
+              // className={`${isScrolled ? "filter invert-0" : "filter invert"}`}
             />
           </a>
         </div>
