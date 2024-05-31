@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
-import Spinner from '../Components/Spinner'
+import Spinner from '../Spinner'
 
 const ProductInformation = () => {
   const [formData, setFormData] = useState({
