@@ -32,7 +32,6 @@ const Contact = () => {
           <h2 className="text-3xl font-semibold mb-4 text-center text-[#05195F] ">
             How can we help you?
           </h2>
-          <form>
             <div className="mb-4">
               <select
                 className="w-full border-b border-b-black py-2 pr-8 font-bold leading-tight focus:border-gray-500 text-lg bg-transparent "
@@ -46,7 +45,6 @@ const Contact = () => {
               </select>
             </div>
             <FormFields option={selectedOption} /> {/* Place FormFields component outside of the form */}
-          </form>
         </div>
       </div>
     </div>
