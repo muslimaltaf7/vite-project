@@ -8,9 +8,19 @@ const NavBar = () => {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hasShadow, setHasShadow] = useState(false);
+  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
+  const [isOurDataDropdownOpen, setIsOurDataDropdownOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
+  };
+
+  const toggleProductsDropdown = () => {
+    setIsProductsDropdownOpen((prevState) => !prevState);
+  };
+
+  const toggleOurDataDropdown = () => {
+    setIsOurDataDropdownOpen((prevState) => !prevState);
   };
 
   const handleScroll = () => {
@@ -152,7 +162,10 @@ const NavBar = () => {
             Home
           </a>
           <div className="relative group">
-            <button className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4 py-2">
+            <button
+              onClick={toggleProductsDropdown}
+              className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4 py-2"
+            >
               Products{" "}
               <img
                 src={dropdownIcon}
@@ -160,35 +173,40 @@ const NavBar = () => {
                 className="ml-1 h-4 w-4"
               />
             </button>
-            <div className="bg-white py-2 w-full rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
-              <a
-                href="/contentsyndication"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Content Syndication
-              </a>
-              <a
-                href="/purepush"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Pure Push
-              </a>
-              <a
-                href="/abmpage"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                ABM Display
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Product 4
-              </a>
-            </div>
+            {isProductsDropdownOpen && (
+              <div className="bg-white py-2 w-full rounded-lg shadow-lg transition-opacity duration-200">
+                <a
+                  href="/contentsyndication"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Content Syndication
+                </a>
+                <a
+                  href="/purepush"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Pure Push
+                </a>
+                <a
+                  href="/abmpage"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  ABM Display
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Product 4
+                </a>
+              </div>
+            )}
           </div>
           <div className="relative group">
-            <button className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4">
+            <button
+              onClick={toggleOurDataDropdown}
+              className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4"
+            >
               Our Data{" "}
               <img
                 src={dropdownIcon}
@@ -196,32 +214,34 @@ const NavBar = () => {
                 className="ml-1 h-4 w-4"
               />
             </button>
-            <div className="bg-white w-full absolute rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Data 1
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Data 2
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Data 3
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Data 4
-              </a>
-            </div>
+            {isOurDataDropdownOpen && (
+              <div className="bg-white py-2 w-full rounded-lg shadow-lg transition-opacity duration-200">
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Data 1
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Data 2
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Data 3
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Data 4
+                </a>
+              </div>
+            )}
           </div>
           <a
             href="#"
