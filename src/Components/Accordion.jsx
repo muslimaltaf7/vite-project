@@ -59,7 +59,4 @@ const AccordionItem = ({ title, content }) => {
     </>
   );
 };
-
 export default Accordion;
-
-

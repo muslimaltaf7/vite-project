@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from "react";
 import dropdownIcon from "../assets/icons8-dropdown-50.png";
 import { FaBars } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [hasShadow, setHasShadow] = useState(false);
+  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
+  const [isOurDataDropdownOpen, setIsOurDataDropdownOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
+  };
+
+  const toggleProductsDropdown = () => {
+    setIsProductsDropdownOpen((prevState) => !prevState);
+  };
+
+  const toggleOurDataDropdown = () => {
+    setIsOurDataDropdownOpen((prevState) => !prevState);
   };
 
   const handleScroll = () => {
@@ -18,6 +30,7 @@ const NavBar = () => {
     } else {
       setIsNavVisible(true);
     }
+    setHasShadow(currentScrollY > 0);
     setLastScrollY(currentScrollY);
   };
 
@@ -28,11 +41,13 @@ const NavBar = () => {
     };
   }, [lastScrollY]);
 
+  const navigate = useNavigate();
+
   return (
     <nav
       className={`p-4 z-20 sticky top-0 w-full bg-white mt-3 transition-transform duration-300 ${
         isNavVisible ? "transform translate-y-0" : "transform -translate-y-full"
-      }`}
+      } ${hasShadow ? "shadow-lg" : ""}`}
     >
       <div className="sm:px-12 mx-auto flex justify-between gap-4 items-center">
         <div className="text-white text-2xl flex-1">
@@ -147,7 +162,10 @@ const NavBar = () => {
             Home
           </a>
           <div className="relative group">
-            <button className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4 py-2">
+            <button
+              onClick={toggleProductsDropdown}
+              className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4 py-2"
+            >
               Products{" "}
               <img
                 src={dropdownIcon}
@@ -155,35 +173,40 @@ const NavBar = () => {
                 className="ml-1 h-4 w-4"
               />
             </button>
-            <div className="bg-white py-2 w-full rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
-              <a
-                href="/contentsyndication"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Content Syndication
-              </a>
-              <a
-                href="/purepush"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Pure Push
-              </a>
-              <a
-                href="/abmpage"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                ABM Display
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Product 4
-              </a>
-            </div>
+            {isProductsDropdownOpen && (
+              <div className="bg-white py-2 w-full rounded-lg shadow-lg transition-opacity duration-200">
+                <a
+                  href="/contentsyndication"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Content Syndication
+                </a>
+                <a
+                  href="/purepush"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Pure Push
+                </a>
+                <a
+                  href="/abmpage"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  ABM Display
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Product 4
+                </a>
+              </div>
+            )}
           </div>
           <div className="relative group">
-            <button className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4">
+            <button
+              onClick={toggleOurDataDropdown}
+              className="text-lg focus:outline-none flex items-center font-medium w-full text-left px-4"
+            >
               Our Data{" "}
               <img
                 src={dropdownIcon}
@@ -191,32 +214,34 @@ const NavBar = () => {
                 className="ml-1 h-4 w-4"
               />
             </button>
-            <div className="bg-white w-full absolute rounded-lg shadow-lg hidden group-hover:block transition-opacity duration-200">
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Data 1
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Data 2
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Data 3
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              >
-                Data 4
-              </a>
-            </div>
+            {isOurDataDropdownOpen && (
+              <div className="bg-white py-2 w-full rounded-lg shadow-lg transition-opacity duration-200">
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Data 1
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Data 2
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Data 3
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                >
+                  Data 4
+                </a>
+              </div>
+            )}
           </div>
           <a
             href="#"
@@ -225,7 +250,10 @@ const NavBar = () => {
             About Us
           </a>
           <div className="pb-4">
-            <button className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mt-4 mx-2 w-[calc(100%-2rem)]">
+            <button
+              onClick={() => navigate("/contact")}
+              className="bg-[#CC0047] text-white text-lg py-[4px] px-6 rounded-full focus:outline-none mt-4 mx-2 w-[calc(100%-2rem)]"
+            >
               Let's Talk
             </button>
           </div>
@@ -236,4 +264,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

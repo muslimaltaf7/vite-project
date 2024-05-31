@@ -233,6 +233,7 @@ const Footer = () => {
           </nav>
         </div>
       </div>
+      
       <div className="w-full">
           <hr className="border-5 border-gray-200" />
         <div className="flex w-full flex-col md:flex-col lg:flex-row xl:flex-row sm:space-y-5 md:space-y-5 sm:flex-col lg:space-y-0 py-10">
